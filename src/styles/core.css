@@ -30,6 +30,11 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+img,
+video {
+  max-width: 100%;
+}
+
 strong {
   font-weight: 800;
 }
@@ -546,8 +551,8 @@ section {
 }
 
 .gallery-card {
-  width: 520px;
-  height: 560px;
+  width: clamp(260px, 78vw, 520px);
+  aspect-ratio: 13 / 14;
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
@@ -1414,6 +1419,9 @@ footer {
   .container {
     padding: 0 24px;
   }
+  .section-pad {
+    padding: 96px 0;
+  }
   #lang-bar {
     padding: 14px 24px;
   }
@@ -1740,10 +1748,63 @@ body::after {
 }
 
 @media (max-width: 740px) {
+  .section-pad {
+    padding: 84px 0;
+  }
+  .gallery-header {
+    padding: 76px 0 46px;
+  }
+  .gallery-track {
+    gap: 14px;
+  }
+  .gallery-card {
+    width: clamp(240px, 82vw, 420px);
+    aspect-ratio: 4 / 5;
+    border-radius: 16px;
+  }
+  .gallery-zoom-hint {
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 13px;
+  }
+
+  .hero-cta-wrap {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .btn-primary,
+  .btn-ghost {
+    width: min(360px, 92vw);
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nearby-grid {
+    grid-template-columns: 1fr;
+  }
+  .nearby-media {
+    min-height: 210px;
+  }
+
   .modal-stepper {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .modal-actions {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 520px) {
+  #lang-bar {
+    padding: 12px 16px;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .nav-right {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
