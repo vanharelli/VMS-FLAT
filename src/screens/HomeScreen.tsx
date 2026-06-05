@@ -1079,14 +1079,6 @@ export default function HomeScreen() {
           </div>
           <div className="location-grid">
             <div className="location-info reveal-left">
-              <div className="location-address">
-                <div className="addr-label" data-lang-key="endereco">
-                  Endereço
-                </div>
-                <div className="addr-text">
-                  {address}
-                </div>
-              </div>
               <div className="nearby-grid">
                 {nearbyPlaces.map((p) => (
                   <a
@@ -1152,6 +1144,12 @@ export default function HomeScreen() {
                     Ver no Mapa ↗
                   </a>
                 </div>
+              </div>
+              <div className="location-address location-address-below">
+                <div className="addr-label" data-lang-key="endereco">
+                  Endereço
+                </div>
+                <div className="addr-text">{address}</div>
               </div>
             </div>
           </div>
