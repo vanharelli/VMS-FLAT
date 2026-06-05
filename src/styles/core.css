@@ -430,7 +430,7 @@ section {
   font-size: 0.55rem;
   letter-spacing: 0.45em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--salmon-dark);
   font-weight: 800;
   margin-bottom: 16px;
   display: flex;
@@ -442,7 +442,7 @@ section {
   content: "";
   width: 32px;
   height: 1px;
-  background: var(--gold);
+  background: var(--salmon-dark);
   flex-shrink: 0;
 }
 
