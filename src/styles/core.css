@@ -46,7 +46,8 @@ button {
 
 strong {
   font-weight: 800;
-  color: var(--salmon-dark);
+  color: #000;
+  font-style: italic;
 }
 
 #root {
@@ -64,6 +65,17 @@ strong {
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+body {
+  -ms-overflow-style: none;
 }
 
 *,
@@ -1100,7 +1112,7 @@ section {
   font-size: 0.55rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--salmon-dark);
   margin-bottom: 12px;
 }
 

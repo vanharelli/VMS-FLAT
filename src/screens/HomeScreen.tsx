@@ -499,15 +499,12 @@ export default function HomeScreen() {
 
     const cursor = document.getElementById('cursor')
     const ring = document.getElementById('cursor-ring')
-    const prefersFinePointer = window.matchMedia('(pointer: fine)').matches
+    const cursorEnabled = window.matchMedia('(pointer: fine)').matches
 
-    if (!prefersFinePointer) {
+    if (!cursorEnabled) {
       if (cursor) cursor.style.display = 'none'
       if (ring) ring.style.display = 'none'
       document.body.style.cursor = 'auto'
-      return () => {
-        langButtons.forEach((b) => b.removeEventListener('click', onLangClick))
-      }
     }
 
     let mx = 0
@@ -535,41 +532,45 @@ export default function HomeScreen() {
       rafId = window.requestAnimationFrame(animRing)
     }
 
-    document.addEventListener('mousemove', onMouseMove)
-    rafId = window.requestAnimationFrame(animRing)
-
-    const interactive = Array.from(document.querySelectorAll<HTMLElement>('a,button,[data-zoomable="true"]'))
+    const interactive = cursorEnabled
+      ? Array.from(document.querySelectorAll<HTMLElement>('a,button,[data-zoomable="true"]'))
+      : []
     const enterHandlers = new Map<HTMLElement, () => void>()
     const leaveHandlers = new Map<HTMLElement, () => void>()
 
-    interactive.forEach((el) => {
-      const onEnter = () => {
-        if (cursor) {
-          cursor.style.width = '20px'
-          cursor.style.height = '20px'
-        }
-        if (ring) {
-          ring.style.width = '60px'
-          ring.style.height = '60px'
-        }
-      }
+    if (cursorEnabled) {
+      document.addEventListener('mousemove', onMouseMove)
+      rafId = window.requestAnimationFrame(animRing)
 
-      const onLeave = () => {
-        if (cursor) {
-          cursor.style.width = '10px'
-          cursor.style.height = '10px'
+      interactive.forEach((el) => {
+        const onEnter = () => {
+          if (cursor) {
+            cursor.style.width = '20px'
+            cursor.style.height = '20px'
+          }
+          if (ring) {
+            ring.style.width = '60px'
+            ring.style.height = '60px'
+          }
         }
-        if (ring) {
-          ring.style.width = '38px'
-          ring.style.height = '38px'
-        }
-      }
 
-      enterHandlers.set(el, onEnter)
-      leaveHandlers.set(el, onLeave)
-      el.addEventListener('mouseenter', onEnter)
-      el.addEventListener('mouseleave', onLeave)
-    })
+        const onLeave = () => {
+          if (cursor) {
+            cursor.style.width = '10px'
+            cursor.style.height = '10px'
+          }
+          if (ring) {
+            ring.style.width = '38px'
+            ring.style.height = '38px'
+          }
+        }
+
+        enterHandlers.set(el, onEnter)
+        leaveHandlers.set(el, onLeave)
+        el.addEventListener('mouseenter', onEnter)
+        el.addEventListener('mouseleave', onLeave)
+      })
+    }
 
     const langBar = document.getElementById('lang-bar')
     const floatCta = document.getElementById('float-cta')
