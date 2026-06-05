@@ -650,6 +650,7 @@ section {
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: rgba(42, 37, 32, 0.7);
+  font-weight: 800;
   margin-bottom: 10px;
 }
 
@@ -819,6 +820,16 @@ section {
 
 .host-visual {
   position: relative;
+}
+
+.host-title {
+  font-size: 0.62rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 800;
+  margin-bottom: 14px;
+  text-align: center;
 }
 
 .host-frame {

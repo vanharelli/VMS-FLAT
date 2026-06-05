@@ -927,6 +927,7 @@ export default function HomeScreen() {
         <div className="container">
           <div className="host-inner">
             <div className="host-visual reveal-left">
+              <div className="host-title">Nossa Anfitriã</div>
               <div className="host-frame">
                 <img
                   className="host-photo"
