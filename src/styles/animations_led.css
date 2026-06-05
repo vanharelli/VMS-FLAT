@@ -1,0 +1,49 @@
+.led-scan {
+  position: relative;
+}
+
+.led-scan::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(124, 58, 237, 0.18) 20%,
+    rgba(59, 130, 246, 0.18) 50%,
+    rgba(16, 185, 129, 0.14) 80%,
+    transparent 100%
+  );
+  filter: blur(14px);
+  opacity: 0.65;
+  transform: translate3d(-25%, 0, 0);
+  animation: ledSweep 2.8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes ledSweep {
+  0% {
+    transform: translate3d(-35%, 0, 0);
+  }
+  100% {
+    transform: translate3d(35%, 0, 0);
+  }
+}
+
+.shimmer {
+  background-size: 200% 100%;
+  animation: shimmerMove 2.2s ease-in-out infinite;
+}
+
+@keyframes shimmerMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
