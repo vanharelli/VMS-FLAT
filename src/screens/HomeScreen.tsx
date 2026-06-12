@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { animate, createTimeline } from 'animejs'
 
 type Translations = Record<string, string>
 
@@ -605,6 +606,19 @@ export default function HomeScreen() {
       document.body.style.cursor = 'auto'
     }
 
+    // ── Hero entrance animation ──
+    const heroTargets = ['.hero-eyebrow', '.hero-logo', '.hero-sub', '.hero-cta-wrap', '.hero-scroll-hint']
+    heroTargets.forEach((sel) => {
+      const el = document.querySelector<HTMLElement>(sel)
+      if (el) { el.style.opacity = '0'; el.style.transform = 'translateY(28px)' }
+    })
+    createTimeline({ defaults: { ease: 'outExpo' } })
+      .add('.hero-eyebrow', { opacity: [0, 1], translateY: [28, 0], duration: 900 }, 300)
+      .add('.hero-logo',    { opacity: [0, 1], translateY: [28, 0], scale: [0.94, 1], duration: 1000 }, 600)
+      .add('.hero-sub',     { opacity: [0, 1], translateY: [20, 0], duration: 800 }, 900)
+      .add('.hero-cta-wrap',{ opacity: [0, 1], translateY: [16, 0], duration: 700 }, 1100)
+      .add('.hero-scroll-hint', { opacity: [0, 1], translateY: [12, 0], duration: 600 }, 1300)
+
     let mx = 0
     let my = 0
     let rx = 0
@@ -715,13 +729,27 @@ export default function HomeScreen() {
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return
-          entry.target.classList.add('visible')
+          const el = entry.target as HTMLElement
+          const delay = parseFloat(el.style.getPropertyValue('--i') || '0') * 80
+          animate(el, {
+            opacity: [0, 1],
+            translateY: [32, 0],
+            duration: 750,
+            delay,
+            ease: 'outExpo',
+            onBegin: () => el.classList.add('visible'),
+          })
+          observer.unobserve(el)
         })
       },
       { threshold: 0.1 },
     )
 
-    reveals.forEach((el) => observer.observe(el))
+    reveals.forEach((el) => {
+      const htmlEl = el as HTMLElement
+      htmlEl.style.opacity = '0'
+      observer.observe(el)
+    })
 
     // Gallery card 3D tilt via event delegation (cards render async)
     const galleryWrap = document.querySelector<HTMLElement>('.gallery-track-wrap')
@@ -880,22 +908,19 @@ export default function HomeScreen() {
 
     const sliderInterval = window.setInterval(() => goNext(), 5500)
 
-    // Stat counter animation
+    // Stat counter animation via anime.js
     const statEls = Array.from(document.querySelectorAll<HTMLElement>('.hstat-num[data-count], .stat-num[data-count]'))
     const animateCounter = (el: HTMLElement) => {
       const target = parseFloat(el.dataset.count ?? '0')
       const decimals = parseInt(el.dataset.decimals ?? '0', 10)
       const suffix = el.dataset.suffix ?? ''
-      const duration = 1400
-      const start = performance.now()
-      const tick = (now: number) => {
-        const progress = Math.min((now - start) / duration, 1)
-        const eased = 1 - Math.pow(1 - progress, 3)
-        const current = target * eased
-        el.textContent = current.toFixed(decimals) + suffix
-        if (progress < 1) window.requestAnimationFrame(tick)
-      }
-      window.requestAnimationFrame(tick)
+      const obj = { val: 0 }
+      animate(obj, {
+        val: target,
+        duration: 1600,
+        ease: 'outExpo',
+        onUpdate: () => { el.textContent = obj.val.toFixed(decimals) + suffix },
+      })
     }
 
     const statObserver = new IntersectionObserver(
