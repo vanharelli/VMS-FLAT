@@ -262,7 +262,7 @@ export default function HomeScreen() {
       {
         id: 'airport',
         name: 'Aeroporto JK',
-        imgSrc: '/aeroporto.jpg',
+        imgSrc: '/aeroporto.webp',
         alt: 'Aeroporto JK',
         distKey: 'dist_airport',
         mapsUrl: 'https://maps.google.com/?q=Aeroporto%20Internacional%20de%20Bras%C3%ADlia%20JK',
@@ -270,7 +270,7 @@ export default function HomeScreen() {
       {
         id: 'rod',
         name: 'Rodoviária',
-        imgSrc: '/RodoviariaInterestadualde.jpg',
+        imgSrc: '/RodoviariaInterestadualde.webp',
         alt: 'Rodoviária',
         distKey: 'dist_rod',
         mapsUrl: 'https://maps.google.com/?q=Rodovi%C3%A1ria%20de%20Bras%C3%ADlia',
@@ -278,7 +278,7 @@ export default function HomeScreen() {
       {
         id: 'pp',
         name: 'Plano Piloto',
-        imgSrc: '/planopiloto.jpg',
+        imgSrc: '/planopiloto.webp',
         alt: 'Plano Piloto',
         distKey: 'dist_pp',
         mapsUrl: 'https://maps.google.com/?q=Plano%20Piloto%20Bras%C3%ADlia',
@@ -1002,7 +1002,7 @@ export default function HomeScreen() {
           <div className="hero-title">
             <img
               className="hero-logo"
-              src="/logo2.png"
+              src="/logo2.webp"
               alt="VMS Flat"
               loading="eager"
               decoding="async"
