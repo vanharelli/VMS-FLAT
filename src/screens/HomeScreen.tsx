@@ -446,8 +446,6 @@ export default function HomeScreen() {
     const fmtIn  = checkIn  ? (lang === 'en' ? checkIn.slice(5,7)+'/'+checkIn.slice(8,10)+'/'+checkIn.slice(0,4)   : checkIn.slice(8,10)+'/'+checkIn.slice(5,7)+'/'+checkIn.slice(0,4))   : '-'
     const fmtOut = checkOut ? (lang === 'en' ? checkOut.slice(5,7)+'/'+checkOut.slice(8,10)+'/'+checkOut.slice(0,4) : checkOut.slice(8,10)+'/'+checkOut.slice(5,7)+'/'+checkOut.slice(0,4)) : '-'
 
-    const mapsLink = 'https://maps.app.goo.gl/SummerParkBsb'
-
     if (lang === 'en') {
       return [
         '🏡 *VMS Flat — Booking Request*',
