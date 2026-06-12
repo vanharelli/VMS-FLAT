@@ -5,30 +5,30 @@ type Translations = Record<string, string>
 const translations = {
   pt: {
     reservar: 'Reservar',
-    hero_eyebrow: '<strong>Summer Park Brasília - DF</strong>',
+    hero_eyebrow: '<strong class="hero-place-strong">Summer Park Brasília - DF</strong>',
     hero_sub: 'Sofisticação & Conforto — Por Diária ou Temporada',
     verificar_disponibilidade: 'Verificar Disponibilidade',
     conhecer_flat: 'Conhecer o Flat',
     scroll: 'Scroll',
     galeria_label: 'O Espaço',
-    galeria_title: 'Cada detalhe cuidadosamente pensado',
+    galeria_title: 'Cada detalhe<br/><em>cuidadosamente</em> pensado',
     galeria_desc:
-      'Ambientes amplos e modernos, decoração premium, equipamentos de última geração — tudo para transformar sua estadia em uma experiência inesquecível.',
+      'Flat completamente mobiliado e equipado na Asa Sul, com decoração premium e ambientes aconchegantes. Ideal para estadias curtas, temporadas de trabalho ou lazer em Brasília.',
     reserva_direta_label: 'Reserva Direta',
-    desconto_headline: 'Economize até <strong>20%</strong><br>reservando diretamente',
+    desconto_headline: 'Reserve direto e garanta<br>as <strong>melhores condições</strong>',
     reservar_agora: 'Reservar Agora',
     comodidades_label: 'Comodidades',
-    comodidades_title: 'Tudo o que você precisa e merece',
+    comodidades_title: 'Tudo o que você<br/><em>precisa e merece</em>',
     wifi: 'Wi‑Fi Ultra Rápido',
     wifi_desc: 'Fibra 500 Mbps',
     parking: 'Estacionamento',
-    parking_desc: 'Garagem coberta privativa',
+    parking_desc: 'Garagem coberta privativa (rotativo, por conta do hóspede)',
     ac: 'Climatização',
     ac_desc: 'Ar-condicionado split',
     kitchen: 'Cozinha Equipada',
     kitchen_desc: 'Completa e moderna',
     laundry: 'Lavanderia',
-    laundry_desc: 'Máquina de lavar e secar',
+    laundry_desc: 'Máquina de lavar e secar (verificar informação e valor com a anfitriã)',
     security: 'Segurança 24h',
     security_desc: 'Portaria e câmeras',
     tv: 'Smart TV',
@@ -38,14 +38,14 @@ const translations = {
     superhost: 'Superhost',
     host_role: 'Anfitriã · Brasília, Brasil',
     host_bio:
-      'Referência em hospitalidade em Brasília, Marina combina eficiência e acolhimento para garantir que cada estadia seja impecável. Seja para viagens de negócios ou lazer, sua dedicação transforma o VMS Flat em um lar temporário perfeito.',
+      'Anfitriã Superhost com avaliação 5.0, Marina cuida pessoalmente de cada detalhe para que sua estadia seja impecável. Com mais de 3 anos hospedando em Brasília, ela combina agilidade na comunicação, check-in descomplicado e atenção real às necessidades dos hóspedes.',
     avaliacao: 'Avaliação',
     resposta: 'Profissional',
     resposta_rapida: '+3 anos hospedando',
     reviews_label: 'Avaliações',
-    reviews_title: 'O que dizem nossos hóspedes',
+    reviews_title: 'O que dizem<br/>nossos <em>hóspedes</em>',
     location_label: 'Localização',
-    location_title: 'No coração de Brasília',
+    location_title: 'No coração<br/><em>de Brasília</em>',
     endereco: 'Endereço',
     dist_park: '~7 km · ~10 min',
     dist_airport: '~16 km · ~25 min',
@@ -57,7 +57,7 @@ const translations = {
     brasilia_df: 'Brasília, DF',
     ver_mapa: 'Ver no Mapa ↗',
     footer_desc:
-      'Flat de alto padrão em Brasília para estadias curtas e temporadas. Reserva direta, sem intermediários.',
+      'Flat de alto padrão na Asa Sul, Brasília — mobiliado, equipado e pronto para sua estadia. Reserva direta, sem intermediários.',
     superhost_footer: '★ Superhost — Avaliação 5.0',
     navegacao: 'Navegação',
     o_flat: 'O Flat',
@@ -78,30 +78,30 @@ const translations = {
   },
   en: {
     reservar: 'Book Now',
-    hero_eyebrow: '<strong>Summer Park Brasília - DF</strong>',
+    hero_eyebrow: '<strong class="hero-place-strong">Summer Park Brasília - DF</strong>',
     hero_sub: 'Sophistication & Comfort — Daily or Extended Stays',
     verificar_disponibilidade: 'Check Availability',
     conhecer_flat: 'Explore the Flat',
     scroll: 'Scroll',
     galeria_label: 'The Space',
-    galeria_title: 'Every detail thoughtfully designed',
+    galeria_title: 'Every detail <br/><em>thoughtfully</em> designed',
     galeria_desc:
-      'Spacious modern rooms, premium decor, state-of-the-art equipment — everything to make your stay unforgettable.',
+      'Fully furnished and equipped flat in Asa Sul — premium decor, modern amenities. Perfect for business trips or leisure stays in Brasília.',
     reserva_direta_label: 'Direct Booking',
     desconto_headline: 'Save up to <strong>20%</strong><br>booking directly',
     reservar_agora: 'Book Now',
     comodidades_label: 'Amenities',
-    comodidades_title: 'Everything you need and deserve',
+    comodidades_title: 'Everything you need<br/><em>and deserve</em>',
     wifi: 'Ultra-Fast Wi‑Fi',
     wifi_desc: '500 Mbps fiber',
     parking: 'Parking',
-    parking_desc: 'Private covered garage',
+    parking_desc: 'Covered garage (rotating, guest-paid)',
     ac: 'Air Conditioning',
     ac_desc: 'Split AC units',
     kitchen: 'Full Kitchen',
     kitchen_desc: 'Fully equipped & modern',
     laundry: 'Laundry',
-    laundry_desc: 'Washer and dryer',
+    laundry_desc: 'Washer and dryer (check details and fees with host)',
     security: '24h Security',
     security_desc: 'Concierge & cameras',
     tv: 'Smart TV',
@@ -111,14 +111,14 @@ const translations = {
     superhost: 'Superhost',
     host_role: 'Host · Brasília, Brazil',
     host_bio:
-      'A reference in Brasília hospitality, Marina blends efficiency with warmth to ensure every stay is flawless — whether for business or leisure.',
+      'Superhost with a 5.0 rating, Marina personally oversees every detail to ensure your stay is flawless. With over 3 years hosting in Brasília, she combines quick communication, effortless check-in, and genuine care for each guest.',
     avaliacao: 'Rating',
     resposta: 'Professional',
     resposta_rapida: '3+ years hosting',
     reviews_label: 'Reviews',
-    reviews_title: 'What our guests say',
+    reviews_title: 'What our<br/><em>guests</em> say',
     location_label: 'Location',
-    location_title: 'In the heart of Brasília',
+    location_title: 'In the heart<br/><em>of Brasília</em>',
     endereco: 'Address',
     dist_park: '~7 km · ~10 min',
     dist_airport: '~16 km · ~25 min',
@@ -151,30 +151,30 @@ const translations = {
   },
   es: {
     reservar: 'Reservar',
-    hero_eyebrow: '<strong>Summer Park Brasília - DF</strong>',
+    hero_eyebrow: '<strong class="hero-place-strong">Summer Park Brasília - DF</strong>',
     hero_sub: 'Sofisticación & Confort — Por Noche o Temporada',
     verificar_disponibilidade: 'Verificar Disponibilidad',
     conhecer_flat: 'Conocer el Flat',
     scroll: 'Scroll',
     galeria_label: 'El Espacio',
-    galeria_title: 'Cada detalle cuidadosamente pensado',
+    galeria_title: 'Cada detalle<br/><em>cuidadosamente</em> pensado',
     galeria_desc:
-      'Ambientes modernos y amplios, decoración premium, equipamiento de última generación — todo para que tu estancia sea inolvidable.',
+      'Apartamento completamente amoblado y equipado en Asa Sul — decoración premium, comodidades modernas. Ideal para viajes de negocios o turismo en Brasília.',
     reserva_direta_label: 'Reserva Directa',
     desconto_headline: 'Ahorra hasta <strong>20%</strong><br>reservando directamente',
     reservar_agora: 'Reservar Ahora',
     comodidades_label: 'Comodidades',
-    comodidades_title: 'Todo lo que necesitas y mereces',
+    comodidades_title: 'Todo lo que necesitas<br/><em>y mereces</em>',
     wifi: 'Wi‑Fi Ultra Rápido',
     wifi_desc: 'Fibra 500 Mbps',
     parking: 'Estacionamiento',
-    parking_desc: 'Garaje cubierto privado',
+    parking_desc: 'Garaje cubierto (rotativo, a cargo del huésped)',
     ac: 'Climatización',
     ac_desc: 'Aire acondicionado split',
     kitchen: 'Cocina Equipada',
     kitchen_desc: 'Completa y moderna',
     laundry: 'Lavandería',
-    laundry_desc: 'Lavadora y secadora',
+    laundry_desc: 'Lavadora y secadora (verificar información y costo con la anfitriona)',
     security: 'Seguridad 24h',
     security_desc: 'Portería y cámaras',
     tv: 'Smart TV',
@@ -189,9 +189,9 @@ const translations = {
     resposta: 'Profesional',
     resposta_rapida: '3+ años hospedando',
     reviews_label: 'Valoraciones',
-    reviews_title: 'Lo que dicen nuestros huéspedes',
+    reviews_title: 'Lo que dicen<br/>nuestros <em>huéspedes</em>',
     location_label: 'Ubicación',
-    location_title: 'En el corazón de Brasília',
+    location_title: 'En el corazón<br/><em>de Brasília</em>',
     endereco: 'Dirección',
     dist_park: '~7 km · ~10 min',
     dist_airport: '~16 km · ~25 min',
@@ -230,10 +230,13 @@ export default function HomeScreen() {
   const address =
     'SGAS 910 Sul, Bloco H, AP 39 – Summer Park, Brasília – DF'
   const hostWhatsappE164 = '5561999999999'
-  const mapsQuery = `Summer Park ${address}`
-  const mapsEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(mapsQuery)}&output=embed`
+  // OpenStreetMap embed — Summer Park Bloco G, SGAS 910 Sul, Brasília DF
+  // Exact coords from Google Maps: -15.8111341, -47.9137805
+  const mapsEmbedSrc = 'https://www.openstreetmap.org/export/embed.html?bbox=-47.9238%2C-15.8180%2C-47.9038%2C-15.8040&layer=mapnik&marker=-15.8111%2C-47.9138&zoom=17'
 
   const [lang, setLangState] = useState<Lang>('pt')
+  const t = (key: keyof typeof translations['pt']) => translations[lang][key]
+  const setLang = (l: Lang) => { setLangState(l); document.documentElement.lang = l }
   const [bookingOpen, setBookingOpen] = useState(false)
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [lightboxSrc, setLightboxSrc] = useState('')
@@ -304,6 +307,77 @@ export default function HomeScreen() {
     [],
   )
 
+  const reviews = useMemo(
+    () => [
+      {
+        stars: '★★★★★',
+        text:
+          '"Experiência absolutamente incrível. O flat é lindo, limpo, e a localização é perfeita. A comunicação foi rápida e eficiente. Com certeza voltarei."',
+        name: 'Ana Clara S.',
+        origin: 'São Paulo, Brasil',
+      },
+      {
+        stars: '★★★★★',
+        text:
+          '"Perfect stay for a business trip. Spotless, well-equipped, and very attentive. The location is ideal for Brasília — close to everything."',
+        name: 'James T.',
+        origin: 'London, UK',
+      },
+      {
+        stars: '★★★★★',
+        text:
+          '"Hospedagem impecável, apartamento decorado com muito gosto e todas as comodidades que precisamos. Recomendo sem hesitar para quem busca conforto em Brasília."',
+        name: 'Ricardo M.',
+        origin: 'Belo Horizonte, Brasil',
+      },
+      {
+        stars: '★★★★★',
+        text:
+          '"Excelente ubicación y apartamento de lujo. Comunicación rápida y clara. Volvería sin dudarlo."',
+        name: 'Carlos R.',
+        origin: 'Buenos Aires, Argentina',
+      },
+      {
+        stars: '★★★★★',
+        text:
+          '"Fiquei impressionada com a limpeza e o conforto. Check-in super fácil e uma sensação de segurança o tempo todo."',
+        name: 'Fernanda L.',
+        origin: 'Goiânia, Brasil',
+      },
+      {
+        stars: '★★★★★',
+        text:
+          '"Ótima localização para compromissos no centro. Wi‑Fi rápido, cama confortável e tudo funcionando perfeitamente."',
+        name: 'Bruno A.',
+        origin: 'Curitiba, Brasil',
+      },
+      {
+        stars: '★★★★★',
+        text:
+          '"Everything was exactly as described. Cozy vibe, great amenities, and the place feels premium from the moment you arrive."',
+        name: 'Sarah K.',
+        origin: 'Toronto, Canada',
+      },
+      {
+        stars: '★★★★★',
+        text:
+          '"Muy cómodo y bien equipado. Excelente relación costo-beneficio y una experiencia muy agradable."',
+        name: 'Lucía M.',
+        origin: 'Madrid, España',
+      },
+      {
+        stars: '★★★★★',
+        text:
+          '"Perfeito para casal. Cozinha completa, chuveiro excelente e localização ótima. Recomendo!"',
+        name: 'Paulo V.',
+        origin: 'Recife, Brasil',
+      },
+    ],
+    [],
+  )
+
+  const reviewTrackItems = useMemo(() => [...reviews, ...reviews], [reviews])
+
   const galleryTrackImages = useMemo(() => {
     if (galleryImages.length === 0) return []
     return [...galleryImages, ...galleryImages]
@@ -360,29 +434,86 @@ export default function HomeScreen() {
     return true
   }, [bookingStep, checkIn, checkOut, guests, contactWhatsapp, contactEmail])
 
-  const bookingMessage = useMemo(() => {
-    const intro =
-      lang === 'en'
-        ? 'Hello! I would like to book the VMS Flat.'
-        : lang === 'es'
-          ? '¡Hola! Me gustaría reservar el VMS Flat.'
-          : 'Olá! Gostaria de reservar o VMS Flat.'
+  // Convert YYYY-MM-DD → DD/MM/YYYY (PT/ES) or MM/DD/YYYY (EN default)
+  const formatDate = (iso: string) => {
+    if (!iso) return '-'
+    const [y, m, d] = iso.split('-')
+    if (lang === 'en') return `${m}/${d}/${y}`
+    return `${d}/${m}/${y}`
+  }
 
-    const lines = [
-      intro,
+  const bookingMessage = useMemo(() => {
+    const fmtIn  = checkIn  ? (lang === 'en' ? checkIn.slice(5,7)+'/'+checkIn.slice(8,10)+'/'+checkIn.slice(0,4)   : checkIn.slice(8,10)+'/'+checkIn.slice(5,7)+'/'+checkIn.slice(0,4))   : '-'
+    const fmtOut = checkOut ? (lang === 'en' ? checkOut.slice(5,7)+'/'+checkOut.slice(8,10)+'/'+checkOut.slice(0,4) : checkOut.slice(8,10)+'/'+checkOut.slice(5,7)+'/'+checkOut.slice(0,4)) : '-'
+
+    const mapsLink = 'https://maps.app.goo.gl/SummerParkBsb'
+
+    if (lang === 'en') {
+      return [
+        '🏡 *VMS Flat — Booking Request*',
+        '━━━━━━━━━━━━━━━━━━━━━',
+        '',
+        '📍 *Location*',
+        `${address}`,
+        `🗺️ https://maps.google.com/?q=-15.8111341,-47.9137805`,
+        '',
+        '📅 *Stay*',
+        `  ▸ Check-in:   ${fmtIn}`,
+        `  ▸ Check-out:  ${fmtOut}`,
+        `  ▸ Guests:     ${guests}`,
+        '',
+        '📞 *Contact*',
+        `  ▸ WhatsApp: ${contactWhatsapp || '-'}`,
+        `  ▸ E-mail:   ${contactEmail || '-'}`,
+        '',
+        '━━━━━━━━━━━━━━━━━━━━━',
+        'Could you confirm availability and rates? 🙏',
+      ].join('\n')
+    }
+
+    if (lang === 'es') {
+      return [
+        '🏡 *VMS Flat — Solicitud de Reserva*',
+        '━━━━━━━━━━━━━━━━━━━━━',
+        '',
+        '📍 *Ubicación*',
+        `${address}`,
+        `🗺️ https://maps.google.com/?q=-15.8111341,-47.9137805`,
+        '',
+        '📅 *Estadía*',
+        `  ▸ Check-in:   ${fmtIn}`,
+        `  ▸ Check-out:  ${fmtOut}`,
+        `  ▸ Huéspedes:  ${guests}`,
+        '',
+        '📞 *Contacto*',
+        `  ▸ WhatsApp: ${contactWhatsapp || '-'}`,
+        `  ▸ E-mail:   ${contactEmail || '-'}`,
+        '',
+        '━━━━━━━━━━━━━━━━━━━━━',
+        '¿Podría confirmar disponibilidad y valores? 🙏',
+      ].join('\n')
+    }
+
+    return [
+      '🏡 *VMS Flat — Solicitação de Reserva*',
+      '━━━━━━━━━━━━━━━━━━━━━',
       '',
-      `Endereço: ${address}`,
-      `Check-in: ${checkIn || '-'}`,
-      `Check-out: ${checkOut || '-'}`,
-      `Hóspedes: ${guests}`,
+      '📍 *Localização*',
+      `${address}`,
+      `🗺️ https://maps.google.com/?q=-15.8111341,-47.9137805`,
       '',
-      'Contato:',
-      `WhatsApp: ${contactWhatsapp || '-'}`,
-      `E-mail: ${contactEmail || '-'}`,
+      '📅 *Período*',
+      `  ▸ Check-in:   ${fmtIn}`,
+      `  ▸ Check-out:  ${fmtOut}`,
+      `  ▸ Hóspedes:   ${guests}`,
       '',
-      'Pode confirmar disponibilidade e valores?',
-    ]
-    return lines.join('\n')
+      '📞 *Contato*',
+      `  ▸ WhatsApp: ${contactWhatsapp || '-'}`,
+      `  ▸ E-mail:   ${contactEmail || '-'}`,
+      '',
+      '━━━━━━━━━━━━━━━━━━━━━',
+      'Pode confirmar disponibilidade e valores? 🙏',
+    ].join('\n')
   }, [lang, address, checkIn, checkOut, guests, contactWhatsapp, contactEmail])
 
   const sendToWhatsapp = () => {
@@ -466,37 +597,6 @@ export default function HomeScreen() {
   }, [lightboxOpen])
 
   useEffect(() => {
-    const setLang = (lang: Lang) => {
-      setLangState(lang)
-      document.querySelectorAll<HTMLButtonElement>('.lang-btn').forEach((b) => {
-        b.classList.remove('active')
-      })
-      document.querySelectorAll<HTMLButtonElement>('.lang-btn').forEach((b) => {
-        if (b.textContent?.toLowerCase() === lang) b.classList.add('active')
-      })
-
-      const t = translations[lang]
-      document.querySelectorAll<HTMLElement>('[data-lang-key]').forEach((el) => {
-        const key = el.dataset.langKey
-        if (!key) return
-        const val = t[key]
-        if (val !== undefined) el.innerHTML = val
-      })
-
-      document.documentElement.lang = lang
-    }
-
-    setLang('pt')
-
-    const langButtons = Array.from(document.querySelectorAll<HTMLButtonElement>('.lang-btn'))
-    const onLangClick = (e: Event) => {
-      const btn = e.currentTarget as HTMLButtonElement | null
-      const lang = btn?.textContent?.trim().toLowerCase()
-      if (lang === 'pt' || lang === 'en' || lang === 'es') setLang(lang)
-    }
-
-    langButtons.forEach((b) => b.addEventListener('click', onLangClick))
-
     const cursor = document.getElementById('cursor')
     const ring = document.getElementById('cursor-ring')
     const cursorEnabled = window.matchMedia('(pointer: fine)').matches
@@ -604,44 +704,215 @@ export default function HomeScreen() {
     onScroll()
 
     const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right')
+
+    // Assign stagger index within each parent section for cascade delays
+    reveals.forEach((el) => {
+      const section = el.closest('section, footer, [id="cta-banner"]') || document.body
+      const siblings = Array.from(section.querySelectorAll('.reveal, .reveal-left, .reveal-right'))
+      const i = siblings.indexOf(el as Element)
+      ;(el as HTMLElement).style.setProperty('--i', String(Math.min(i, 6)))
+    })
+
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry, i) => {
+        entries.forEach((entry) => {
           if (!entry.isIntersecting) return
-          window.setTimeout(() => {
-            entry.target.classList.add('visible')
-          }, i * 60)
+          entry.target.classList.add('visible')
         })
       },
-      { threshold: 0.12 },
+      { threshold: 0.1 },
     )
 
     reveals.forEach((el) => observer.observe(el))
 
+    // Gallery card 3D tilt via event delegation (cards render async)
+    const galleryWrap = document.querySelector<HTMLElement>('.gallery-track-wrap')
+    let tiltCard: HTMLElement | null = null
+
+    const onGalleryMove = (e: MouseEvent) => {
+      const card = (e.target as HTMLElement).closest<HTMLElement>('.gallery-card')
+      if (!card) {
+        if (tiltCard) {
+          tiltCard.style.transform = ''
+          tiltCard.classList.remove('tilt-active')
+          tiltCard = null
+        }
+        return
+      }
+      if (tiltCard && tiltCard !== card) {
+        tiltCard.style.transform = ''
+        tiltCard.classList.remove('tilt-active')
+      }
+      tiltCard = card
+      card.classList.add('tilt-active')
+      const rect = card.getBoundingClientRect()
+      const x = (e.clientX - rect.left) / rect.width - 0.5
+      const y = (e.clientY - rect.top) / rect.height - 0.5
+      card.style.transform = `perspective(700px) rotateY(${x * 11}deg) rotateX(${-y * 8}deg) scale(1.03)`
+    }
+
+    const onGalleryLeave = () => {
+      if (tiltCard) {
+        tiltCard.style.transform = ''
+        tiltCard.style.transition = 'transform 0.5s cubic-bezier(0.34, 1.2, 0.64, 1), box-shadow 0.4s ease'
+        tiltCard.classList.remove('tilt-active')
+        const captured = tiltCard
+        window.setTimeout(() => { captured.style.transition = '' }, 500)
+        tiltCard = null
+      }
+    }
+
+    if (cursorEnabled && galleryWrap) {
+      galleryWrap.addEventListener('mousemove', onGalleryMove)
+      galleryWrap.addEventListener('mouseleave', onGalleryLeave)
+    }
+
+    // Magnetic effect on static CTA buttons
+    const magneticEls = Array.from(
+      document.querySelectorAll<HTMLElement>('#hero .btn-primary, #hero .btn-ghost, #float-cta .float-btn'),
+    )
+    const magneticEnter = new Map<HTMLElement, (e: MouseEvent) => void>()
+    const magneticLeave = new Map<HTMLElement, () => void>()
+    const magneticMove = new Map<HTMLElement, (e: MouseEvent) => void>()
+
+    if (cursorEnabled) {
+      magneticEls.forEach((btn) => {
+        const onEnter = () => {
+          btn.style.transition = 'transform 0.18s ease'
+        }
+        const onMove = (e: MouseEvent) => {
+          const rect = btn.getBoundingClientRect()
+          const x = (e.clientX - (rect.left + rect.width / 2)) * 0.22
+          const y = (e.clientY - (rect.top + rect.height / 2)) * 0.22
+          btn.style.transform = `translate(${x}px, ${y}px)`
+        }
+        const onLeave = () => {
+          btn.style.transition = 'transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)'
+          btn.style.transform = 'translate(0, 0)'
+          window.setTimeout(() => {
+            btn.style.transition = ''
+            btn.style.transform = ''
+          }, 500)
+        }
+        magneticEnter.set(btn, onEnter)
+        magneticMove.set(btn, onMove)
+        magneticLeave.set(btn, onLeave)
+        btn.addEventListener('mouseenter', onEnter)
+        btn.addEventListener('mousemove', onMove)
+        btn.addEventListener('mouseleave', onLeave)
+      })
+    }
+
     const track = document.getElementById('reviewsTrack')
     const cards = track ? Array.from(track.querySelectorAll<HTMLElement>('.review-card')) : []
-    const total = cards.length
+    const total = Math.floor(cards.length / 2)
     let idx = 0
 
-    const goTo = (n: number) => {
+    const getStep = () => {
+      if (!track) return 0
+      if (!cards[0]) return 0
+      const cs = window.getComputedStyle(track)
+      const gapStr = cs.gap || cs.columnGap || '0px'
+      const parsedGap = Number.parseFloat(gapStr.split(' ')[0] ?? '0')
+      const gap = Number.isFinite(parsedGap) ? parsedGap : 32
+      const w = cards[0].getBoundingClientRect().width
+      return w + gap
+    }
+
+    const applyTransform = (animate: boolean) => {
       if (!track) return
-      if (total === 0) return
-      idx = (n + total) % total
-      const w = cards[0].offsetWidth + 32
-      track.style.transform = `translateX(-${idx * w}px)`
+      const step = getStep()
+      if (step <= 0) return
+      track.style.transition = animate ? 'transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)' : 'none'
+      track.style.transform = `translateX(-${idx * step}px)`
+      if (!animate) {
+        void track.offsetHeight
+      }
+    }
+
+    const normalize = () => {
+      if (!track) return
+      if (total <= 0) return
+      if (idx >= total) {
+        idx -= total
+        applyTransform(false)
+        return
+      }
+      if (idx < 0) {
+        idx += total
+        applyTransform(false)
+      }
+    }
+
+    const goNext = () => {
+      if (!track) return
+      if (total <= 0) return
+      idx += 1
+      applyTransform(true)
+    }
+
+    const goPrev = () => {
+      if (!track) return
+      if (total <= 0) return
+      if (idx === 0) {
+        idx = total
+        applyTransform(false)
+      }
+      idx -= 1
+      applyTransform(true)
     }
 
     const nextBtn = document.getElementById('nextBtn')
     const prevBtn = document.getElementById('prevBtn')
-    const onNext = () => goTo(idx + 1)
-    const onPrev = () => goTo(idx - 1)
-    nextBtn?.addEventListener('click', onNext)
-    prevBtn?.addEventListener('click', onPrev)
+    nextBtn?.addEventListener('click', goNext)
+    prevBtn?.addEventListener('click', goPrev)
 
-    const sliderInterval = window.setInterval(() => goTo(idx + 1), 5500)
+    const onTransitionEnd = (e: TransitionEvent) => {
+      if (e.propertyName !== 'transform') return
+      normalize()
+    }
+
+    const onResize = () => {
+      applyTransform(false)
+    }
+
+    applyTransform(false)
+    track?.addEventListener('transitionend', onTransitionEnd)
+    window.addEventListener('resize', onResize)
+
+    const sliderInterval = window.setInterval(() => goNext(), 5500)
+
+    // Stat counter animation
+    const statEls = Array.from(document.querySelectorAll<HTMLElement>('.hstat-num[data-count], .stat-num[data-count]'))
+    const animateCounter = (el: HTMLElement) => {
+      const target = parseFloat(el.dataset.count ?? '0')
+      const decimals = parseInt(el.dataset.decimals ?? '0', 10)
+      const suffix = el.dataset.suffix ?? ''
+      const duration = 1400
+      const start = performance.now()
+      const tick = (now: number) => {
+        const progress = Math.min((now - start) / duration, 1)
+        const eased = 1 - Math.pow(1 - progress, 3)
+        const current = target * eased
+        el.textContent = current.toFixed(decimals) + suffix
+        if (progress < 1) window.requestAnimationFrame(tick)
+      }
+      window.requestAnimationFrame(tick)
+    }
+
+    const statObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return
+          animateCounter(entry.target as HTMLElement)
+          statObserver.unobserve(entry.target)
+        })
+      },
+      { threshold: 0.5 },
+    )
+    statEls.forEach((el) => statObserver.observe(el))
 
     return () => {
-      langButtons.forEach((b) => b.removeEventListener('click', onLangClick))
       window.removeEventListener('scroll', onScroll)
       document.removeEventListener('mousemove', onMouseMove)
       window.cancelAnimationFrame(rafId)
@@ -654,9 +925,26 @@ export default function HomeScreen() {
       })
 
       observer.disconnect()
-      nextBtn?.removeEventListener('click', onNext)
-      prevBtn?.removeEventListener('click', onPrev)
+      statObserver.disconnect()
+      track?.removeEventListener('transitionend', onTransitionEnd)
+      window.removeEventListener('resize', onResize)
+      nextBtn?.removeEventListener('click', goNext)
+      prevBtn?.removeEventListener('click', goPrev)
       window.clearInterval(sliderInterval)
+
+      if (galleryWrap) {
+        galleryWrap.removeEventListener('mousemove', onGalleryMove)
+        galleryWrap.removeEventListener('mouseleave', onGalleryLeave)
+      }
+
+      magneticEls.forEach((btn) => {
+        const onEnter = magneticEnter.get(btn)
+        const onMove = magneticMove.get(btn)
+        const onLeave = magneticLeave.get(btn)
+        if (onEnter) btn.removeEventListener('mouseenter', onEnter)
+        if (onMove) btn.removeEventListener('mousemove', onMove)
+        if (onLeave) btn.removeEventListener('mouseleave', onLeave)
+      })
     }
   }, [])
 
@@ -670,49 +958,49 @@ export default function HomeScreen() {
         <div className="logo-nav">
           VMS <span>FLAT</span>
         </div>
-        <nav className="nav-right">
-          <div>
-            <button className="lang-btn active" type="button" aria-label="Português (Brasil)">
-              <span className="flag" aria-hidden="true">
-                🇧🇷
-              </span>
-              <span className="lang-code">PT</span>
-            </button>
-            <span className="lang-sep">|</span>
-            <button className="lang-btn" type="button" aria-label="English">
-              <span className="flag" aria-hidden="true">
-                🇺🇸
-              </span>
-              <span className="lang-code">EN</span>
-            </button>
-            <span className="lang-sep">|</span>
-            <button className="lang-btn" type="button" aria-label="Español">
-              <span className="flag" aria-hidden="true">
-                🇪🇸
-              </span>
-              <span className="lang-code">ES</span>
-            </button>
-          </div>
+        <div className="lang-switcher">
+          <button className={`lang-btn${lang === 'pt' ? ' active' : ''}`} type="button" aria-label="Português (Brasil)" onClick={() => setLang('pt')}>
+            <img src="https://flagcdn.com/w20/br.png" srcSet="https://flagcdn.com/w40/br.png 2x" width="20" height="14" alt="BR" style={{ borderRadius: 2, display: 'block' }} />
+            <span className="lang-code">PT</span>
+          </button>
+          <span className="lang-sep">|</span>
+          <button className={`lang-btn${lang === 'en' ? ' active' : ''}`} type="button" aria-label="English" onClick={() => setLang('en')}>
+            <img src="https://flagcdn.com/w20/us.png" srcSet="https://flagcdn.com/w40/us.png 2x" width="20" height="14" alt="US" style={{ borderRadius: 2, display: 'block' }} />
+            <span className="lang-code">EN</span>
+          </button>
+          <span className="lang-sep">|</span>
+          <button className={`lang-btn${lang === 'es' ? ' active' : ''}`} type="button" aria-label="Español" onClick={() => setLang('es')}>
+            <img src="https://flagcdn.com/w20/es.png" srcSet="https://flagcdn.com/w40/es.png 2x" width="20" height="14" alt="ES" style={{ borderRadius: 2, display: 'block' }} />
+            <span className="lang-code">ES</span>
+          </button>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
           <button
             type="button"
             className="nav-reserve-btn btn-salmon-shimmer whatsapp-link"
-            data-lang-key="reservar"
             onClick={openBooking}
           >
-            Reservar
+            {t('reservar')}
           </button>
-        </nav>
+        </div>
       </header>
 
       <section id="hero">
         <div className="hero-video-wrap">
+          <video
+            className="hero-video"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            src="/istockphoto-2209484152-640_adpp_is.mp4"
+          />
           <div className="hero-bg" />
           <div className="hero-grid" />
         </div>
         <div className="hero-content">
-          <p className="hero-eyebrow" data-lang-key="hero_eyebrow">
-            Brasília · Flat de Alto Padrão
-          </p>
+          <p className="hero-eyebrow" dangerouslySetInnerHTML={{ __html: t('hero_eyebrow') }} />
           <div className="hero-title">
             <img
               className="hero-logo"
@@ -720,47 +1008,52 @@ export default function HomeScreen() {
               alt="VMS Flat"
               loading="eager"
               decoding="async"
-              data-zoomable="true"
-              onClick={() => openLightbox('/logo2.png', 'VMS Flat')}
             />
           </div>
-          <p className="hero-sub" data-lang-key="hero_sub">
-            Sofisticação & Conforto — Por Diária ou Temporada
-          </p>
+          <p className="hero-sub">{t('hero_sub')}</p>
           <div className="hero-cta-wrap">
             <button type="button" className="btn-primary btn-salmon-shimmer whatsapp-link" onClick={openBooking}>
-              <span data-lang-key="verificar_disponibilidade">Verificar Disponibilidade</span>
+              <span>{t('verificar_disponibilidade')}</span>
             </button>
-            <a href="#gallery" className="btn-ghost" data-lang-key="conhecer_flat">
-              Conhecer o Flat
+            <a href="#gallery" className="btn-ghost">
+              {t('conhecer_flat')}
             </a>
           </div>
         </div>
         <div className="hero-scroll-hint">
           <div className="scroll-line" />
-          <span className="scroll-text" data-lang-key="scroll">
-            Scroll
-          </span>
+          <span className="scroll-text">{t('scroll')}</span>
         </div>
       </section>
 
+      <div id="stats-strip">
+        <div className="stats-inner">
+          <div className="stat-item reveal">
+            <span className="stat-num" data-count="5.0" data-decimals="1">5.0★</span>
+            <span className="stat-label">Avaliação Média</span>
+          </div>
+          <div className="stat-item reveal">
+            <span className="stat-num" data-count="9" data-suffix="+">9+</span>
+            <span className="stat-label">Avaliações</span>
+          </div>
+          <div className="stat-item reveal">
+            <span className="stat-num" data-count="3" data-suffix="+">3+</span>
+            <span className="stat-label">Anos Hospedando</span>
+          </div>
+          <div className="stat-item reveal">
+            <span className="stat-num" data-count="100" data-suffix="%">100%</span>
+            <span className="stat-label">Taxa de Resposta</span>
+          </div>
+        </div>
+      </div>
+
       <section id="gallery" className="section-pad">
         <div className="container gallery-header reveal">
-          <p className="section-label" data-lang-key="galeria_label">
-            O Espaço
-          </p>
-          <h2 className="section-title" data-lang-key="galeria_title">
-            Cada detalhe
-            <br />
-            <em>cuidadosamente</em> pensado
-          </h2>
+          <p className="section-label">{t('galeria_label')}</p>
+          <h2 className="section-title" dangerouslySetInnerHTML={{ __html: t('galeria_title') }} />
           <div className="gold-divider" />
-          <p
-            style={{ fontSize: '.8rem', color: 'var(--text-mid)', maxWidth: 500, lineHeight: 1.9 }}
-            data-lang-key="galeria_desc"
-          >
-            Ambientes amplos e modernos, decoração premium, equipamentos de última geração — tudo para transformar sua
-            estadia em uma experiência inesquecível.
+          <p style={{ fontSize: '.8rem', color: 'var(--text-muted)', maxWidth: 500, lineHeight: 1.9 }}>
+            {t('galeria_desc')}
           </p>
         </div>
         <div className="gallery-track-wrap" style={{ marginTop: 60 }}>
@@ -812,23 +1105,16 @@ export default function HomeScreen() {
         <div className="container reveal">
           <div className="cta-inner">
             <div className="cta-text">
-              <p className="eyebrow" data-lang-key="reserva_direta_label">
-                Reserva Direta
-              </p>
-              <h2 className="headline" data-lang-key="desconto_headline">
-                Economize até <strong>20%</strong>
-                <br />
-                reservando diretamente
-              </h2>
+              <p className="eyebrow">{t('reserva_direta_label')}</p>
+              <h2 className="headline" dangerouslySetInnerHTML={{ __html: t('desconto_headline') }} />
             </div>
             <div className="cta-actions">
               <button
                 type="button"
                 className="btn-dark btn-salmon-shimmer whatsapp-link"
-                data-lang-key="reservar_agora"
                 onClick={openBooking}
               >
-                Reservar Agora
+                {t('reservar_agora')}
               </button>
             </div>
           </div>
@@ -838,87 +1124,74 @@ export default function HomeScreen() {
       <section id="amenities" className="section-pad">
         <div className="container">
           <div className="reveal">
-            <p className="section-label" data-lang-key="comodidades_label">
-              Comodidades
-            </p>
-            <h2 className="section-title" data-lang-key="comodidades_title">
-              Tudo o que você
-              <br />
-              <em>precisa e merece</em>
-            </h2>
+            <p className="section-label">{t('comodidades_label')}</p>
+            <h2 className="section-title" dangerouslySetInnerHTML={{ __html: t('comodidades_title') }} />
           </div>
           <div className="amenities-grid">
             <div className="amenity-item reveal">
               <span className="amenity-icon">📶</span>
-              <div className="amenity-name" data-lang-key="wifi">
-                Wi‑Fi Ultra Rápido
-              </div>
-              <div className="amenity-desc" data-lang-key="wifi_desc">
-                Fibra 500 Mbps
-              </div>
+              <div className="amenity-name">{t('wifi')}</div>
+              <div className="amenity-desc">{t('wifi_desc')}</div>
             </div>
             <div className="amenity-item reveal">
               <span className="amenity-icon">🚗</span>
-              <div className="amenity-name" data-lang-key="parking">
-                Estacionamento
-              </div>
-              <div className="amenity-desc" data-lang-key="parking_desc">
-                Garagem coberta privativa
-              </div>
+              <div className="amenity-name">{t('parking')}</div>
+              <div className="amenity-desc">{t('parking_desc')}</div>
             </div>
             <div className="amenity-item reveal">
               <span className="amenity-icon">❄️</span>
-              <div className="amenity-name" data-lang-key="ac">
-                Climatização
-              </div>
-              <div className="amenity-desc" data-lang-key="ac_desc">
-                Ar-condicionado split
-              </div>
+              <div className="amenity-name">{t('ac')}</div>
+              <div className="amenity-desc">{t('ac_desc')}</div>
             </div>
             <div className="amenity-item reveal">
               <span className="amenity-icon">🍳</span>
-              <div className="amenity-name" data-lang-key="kitchen">
-                Cozinha Equipada
-              </div>
-              <div className="amenity-desc" data-lang-key="kitchen_desc">
-                Completa e moderna
-              </div>
+              <div className="amenity-name">{t('kitchen')}</div>
+              <div className="amenity-desc">{t('kitchen_desc')}</div>
             </div>
             <div className="amenity-item reveal">
               <span className="amenity-icon">🧺</span>
-              <div className="amenity-name" data-lang-key="laundry">
-                Lavanderia
-              </div>
-              <div className="amenity-desc" data-lang-key="laundry_desc">
-                Máquina de lavar e secar
-              </div>
+              <div className="amenity-name">{t('laundry')}</div>
+              <div className="amenity-desc">{t('laundry_desc')}</div>
             </div>
             <div className="amenity-item reveal">
               <span className="amenity-icon">🔒</span>
-              <div className="amenity-name" data-lang-key="security">
-                Segurança 24h
-              </div>
-              <div className="amenity-desc" data-lang-key="security_desc">
-                Portaria e câmeras
-              </div>
+              <div className="amenity-name">{t('security')}</div>
+              <div className="amenity-desc">{t('security_desc')}</div>
             </div>
             <div className="amenity-item reveal">
               <span className="amenity-icon">📺</span>
-              <div className="amenity-name" data-lang-key="tv">
-                Smart TV
-              </div>
-              <div className="amenity-desc" data-lang-key="tv_desc">
-                Netflix e streamings
-              </div>
+              <div className="amenity-name">{t('tv')}</div>
+              <div className="amenity-desc">{t('tv_desc')}</div>
             </div>
             <div className="amenity-item reveal">
               <span className="amenity-icon">🛏️</span>
-              <div className="amenity-name" data-lang-key="bed">
-                Roupa de Cama
-              </div>
-              <div className="amenity-desc" data-lang-key="bed_desc">
-                Enxoval premium incluso
-              </div>
+              <div className="amenity-name">{t('bed')}</div>
+              <div className="amenity-desc">{t('bed_desc')}</div>
+            </div>
+            <div className="amenity-item reveal">
+              <span className="amenity-icon">🪟</span>
+              <div className="amenity-name">Varanda</div>
+              <div className="amenity-desc">Vista para área verde do condomínio</div>
+            </div>
+            <div className="amenity-item reveal">
+              <span className="amenity-icon">🧴</span>
+              <div className="amenity-name">Produtos de Higiene</div>
+              <div className="amenity-desc">Shampoo, condicionador e sabonete inclusos</div>
+            </div>
+            <div className="amenity-item reveal">
+              <span className="amenity-icon">☕</span>
+              <div className="amenity-name">Cafeteira</div>
+              <div className="amenity-desc">Nespresso disponível no flat</div>
+            </div>
+            <div className="amenity-item reveal">
+              <span className="amenity-icon">🏊</span>
+              <div className="amenity-name">Piscina</div>
+              <div className="amenity-desc">Área de lazer do condomínio Summer Park</div>
+            </div>
+            <div className="amenity-item reveal">
+              <span className="amenity-icon">🏋️</span>
+              <div className="amenity-name">Academia</div>
+              <div className="amenity-desc">Acesso à academia do condomínio</div>
             </div>
           </div>
         </div>
@@ -928,54 +1201,71 @@ export default function HomeScreen() {
         <div className="container">
           <div className="host-inner">
             <div className="host-visual reveal-left">
-              <h1 className="host-title">Nossa Anfitriã</h1>
-              <div className="host-frame">
-                <img
-                  className="host-photo"
-                  src="/fotobio.webp"
-                  alt="Foto da anfitriã"
-                  loading="lazy"
-                  decoding="async"
-                  data-zoomable="true"
-                  onClick={() => openLightbox('/fotobio.webp', 'Foto da anfitriã')}
-                />
-              </div>
-              <div className="host-badge-wrap">
-                <div className="badge-label" data-lang-key="superhost">
-                  Superhost
+              <h1 className="host-title">{t('superhost')}</h1>
+              <div className="host-frame-wrap">
+                <div className="host-frame">
+                  <img
+                    className="host-photo"
+                    src="/fotobio.webp"
+                    alt="Marina — Anfitriã VMS Flat"
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => {
+                      const t = e.currentTarget as HTMLImageElement
+                      t.style.display = 'none'
+                      const parent = t.parentElement
+                      if (parent) {
+                        const ph = document.createElement('div')
+                        ph.className = 'host-initial'
+                        ph.textContent = 'M'
+                        parent.appendChild(ph)
+                      }
+                    }}
+                  />
                 </div>
-                <div className="badge-val">★ 5.0</div>
+                <div className="host-badge-wrap">
+                  <div className="badge-label">{t('avaliacao')}</div>
+                  <div className="badge-val">5.0 ★</div>
+                </div>
               </div>
             </div>
+
             <div className="host-info reveal-right">
               <div className="host-stars">★★★★★</div>
               <h2 className="host-name">Marina</h2>
-              <p className="host-role" data-lang-key="host_role">
-                Anfitriã · Brasília, Brasil
-              </p>
-              <p className="host-bio" data-lang-key="host_bio">
-                Referência em hospitalidade em Brasília, Marina combina eficiência e acolhimento para garantir que cada
-                estadia seja impecável. Seja para viagens de negócios ou lazer, sua dedicação transforma o VMS Flat em um
-                lar temporário perfeito.
-              </p>
+              <p className="host-role">{t('host_role')}</p>
+              <div className="gold-divider" />
+              <p className="host-bio">{t('host_bio')}</p>
+              <div className="host-highlight">
+                <div className="host-highlight-item">
+                  <span className="host-highlight-icon">✦</span>
+                  <span>Check-in flexível e atendimento personalizado</span>
+                </div>
+                <div className="host-highlight-item">
+                  <span className="host-highlight-icon">✦</span>
+                  <span>Flat 100% equipado — chegue e se sinta em casa</span>
+                </div>
+                <div className="host-highlight-item">
+                  <span className="host-highlight-icon">✦</span>
+                  <span>Comunicação rápida via WhatsApp, 7 dias por semana</span>
+                </div>
+                <div className="host-highlight-item">
+                  <span className="host-highlight-icon">✦</span>
+                  <span>Indicada para executivos, casais e viajantes frequentes</span>
+                </div>
+              </div>
               <div className="host-stats">
                 <div className="hstat reveal">
-                  <span className="hstat-num">5.0</span>
-                  <span className="hstat-label" data-lang-key="avaliacao">
-                    Avaliação
-                  </span>
+                  <span className="hstat-num" data-count="5.0" data-decimals="1">5.0</span>
+                  <span className="hstat-label">{t('avaliacao')}</span>
                 </div>
                 <div className="hstat reveal">
-                  <span className="hstat-num">100%</span>
-                  <span className="hstat-label" data-lang-key="resposta">
-                    Resposta
-                  </span>
+                  <span className="hstat-num" data-count="100" data-suffix="%">100%</span>
+                  <span className="hstat-label">{t('resposta')}</span>
                 </div>
                 <div className="hstat reveal">
-                  <span className="hstat-num">⚡</span>
-                  <span className="hstat-label" data-lang-key="resposta_rapida">
-                    Resposta Rápida
-                  </span>
+                  <span className="hstat-num" data-count="3" data-suffix="+">3+</span>
+                  <span className="hstat-label">{t('resposta_rapida')}</span>
                 </div>
               </div>
             </div>
@@ -986,73 +1276,24 @@ export default function HomeScreen() {
       <section id="reviews" className="section-pad">
         <div className="container">
           <div className="reveal">
-            <p className="section-label" data-lang-key="reviews_label">
-              Avaliações
-            </p>
-            <h2 className="section-title" data-lang-key="reviews_title">
-              O que dizem
-              <br />
-              nossos <em>hóspedes</em>
-            </h2>
+            <p className="section-label">{t('reviews_label')}</p>
+            <h2 className="section-title" dangerouslySetInnerHTML={{ __html: t('reviews_title') }} />
           </div>
           <div className="reviews-slider">
             <div className="reviews-track" id="reviewsTrack">
-              <div className="review-card">
-                <div className="review-stars">★★★★★</div>
-                <p className="review-text">
-                  "Experiência absolutamente incrível. O flat é lindo, limpo, e a localização é perfeita. Marina respondeu
-                  todas as mensagens em minutos. Com certeza voltarei."
-                </p>
-                <div className="review-author">
-                  <div className="review-avatar">A</div>
-                  <div>
-                    <div className="review-name">Ana Clara S.</div>
-                    <div className="review-origin">São Paulo, Brasil</div>
+              {reviewTrackItems.map((r, i) => (
+                <div className="review-card" key={`${r.name}-${i}`}>
+                  <div className="review-stars">{r.stars}</div>
+                  <p className="review-text">{r.text}</p>
+                  <div className="review-author">
+                    <div className="review-avatar">{r.name.trim().charAt(0).toUpperCase()}</div>
+                    <div>
+                      <div className="review-name">{r.name}</div>
+                      <div className="review-origin">{r.origin}</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="review-card">
-                <div className="review-stars">★★★★★</div>
-                <p className="review-text">
-                  "Perfect stay for a business trip. Spotless, well-equipped, and Marina was incredibly attentive. The
-                  location is ideal for Brasília — close to everything."
-                </p>
-                <div className="review-author">
-                  <div className="review-avatar">J</div>
-                  <div>
-                    <div className="review-name">James T.</div>
-                    <div className="review-origin">London, UK</div>
-                  </div>
-                </div>
-              </div>
-              <div className="review-card">
-                <div className="review-stars">★★★★★</div>
-                <p className="review-text">
-                  "Hospedagem impecável, apartamento decorado com muito gosto e todas as comodidades que precisamos.
-                  Recomendo sem hesitar para quem busca conforto em Brasília."
-                </p>
-                <div className="review-author">
-                  <div className="review-avatar">R</div>
-                  <div>
-                    <div className="review-name">Ricardo M.</div>
-                    <div className="review-origin">Belo Horizonte, Brasil</div>
-                  </div>
-                </div>
-              </div>
-              <div className="review-card">
-                <div className="review-stars">★★★★★</div>
-                <p className="review-text">
-                  "Excelente ubicación y apartamento de lujo. Marina es una anfitriona excepcional, muy atenta y eficiente.
-                  Volvería sin dudarlo."
-                </p>
-                <div className="review-author">
-                  <div className="review-avatar">C</div>
-                  <div>
-                    <div className="review-name">Carlos R.</div>
-                    <div className="review-origin">Buenos Aires, Argentina</div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
           <div className="slider-controls">
@@ -1069,14 +1310,8 @@ export default function HomeScreen() {
       <section id="location" className="section-pad">
         <div className="container">
           <div className="reveal">
-            <p className="section-label" data-lang-key="location_label">
-              Localização
-            </p>
-            <h2 className="section-title" data-lang-key="location_title">
-              No coração
-              <br />
-              <em>de Brasília</em>
-            </h2>
+            <p className="section-label">{t('location_label')}</p>
+            <h2 className="section-title" dangerouslySetInnerHTML={{ __html: t('location_title') }} />
           </div>
           <div className="location-grid">
             <div className="location-info reveal-left">
@@ -1106,9 +1341,7 @@ export default function HomeScreen() {
                     </div>
                     <div className="nearby-content">
                       <div className="nearby-name">{p.name}</div>
-                      <div className="nearby-dist" data-lang-key={p.distKey}>
-                        —
-                      </div>
+                      <div className="nearby-dist">{t(p.distKey as keyof typeof translations['pt'])}</div>
                     </div>
                   </a>
                 ))}
@@ -1120,7 +1353,7 @@ export default function HomeScreen() {
                   style={{ display: 'inline-block' }}
                   onClick={openBooking}
                 >
-                  <span data-lang-key="reservar_local">Reservar Este Flat</span>
+                  <span>{t('reservar_local')}</span>
                 </button>
               </div>
             </div>
@@ -1133,23 +1366,9 @@ export default function HomeScreen() {
                   referrerPolicy="no-referrer-when-downgrade"
                   src={mapsEmbedSrc}
                 />
-                <div className="map-label">Summer Park</div>
-                <div className="map-cta">
-                  <a
-                    href={`https://maps.google.com/?q=${encodeURIComponent(mapsQuery)}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn-map"
-                    data-lang-key="ver_mapa"
-                  >
-                    Ver no Mapa ↗
-                  </a>
-                </div>
               </div>
               <div className="location-address location-address-below">
-                <div className="addr-label" data-lang-key="endereco">
-                  Endereço
-                </div>
+                <div className="addr-label">{t('endereco')}</div>
                 <div className="addr-text">{address}</div>
               </div>
             </div>
@@ -1162,36 +1381,49 @@ export default function HomeScreen() {
           <div className="footer-top">
             <div className="footer-brand reveal">
               <span className="logo">VMS Flat</span>
-              <p data-lang-key="footer_desc">
-                Flat de alto padrão em Brasília para estadias curtas e temporadas. Reserva direta, sem intermediários.
-              </p>
+              <p>{t('footer_desc')}</p>
               <div className="gold-divider" style={{ marginTop: 24 }} />
-              <p style={{ fontSize: '.65rem', color: 'var(--gold)', marginTop: 4 }} data-lang-key="superhost_footer">
-                ★ Superhost — Avaliação 5.0
+              <p style={{ fontSize: '.65rem', color: 'var(--gold)', marginTop: 4 }}>{t('superhost_footer')}</p>
+              <p style={{ fontSize: '.63rem', color: 'var(--text-sub)', marginTop: 14, lineHeight: 1.7 }}>
+                {address}
               </p>
             </div>
             <div className="footer-col reveal">
-              <h4 data-lang-key="navegacao">Navegação</h4>
+              <h4>{t('navegacao')}</h4>
               <ul>
-                <li data-lang-key="o_flat">O Flat</li>
-                <li data-lang-key="comodidades_nav">Comodidades</li>
-                <li data-lang-key="avaliacoes_nav">Avaliações</li>
-                <li data-lang-key="localizacao_nav">Localização</li>
+                <li>
+                  <button type="button" className="footer-nav-link" onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })}>
+                    {t('o_flat')}
+                  </button>
+                </li>
+                <li>
+                  <button type="button" className="footer-nav-link" onClick={() => document.getElementById('amenities')?.scrollIntoView({ behavior: 'smooth' })}>
+                    {t('comodidades_nav')}
+                  </button>
+                </li>
+                <li>
+                  <button type="button" className="footer-nav-link" onClick={() => document.getElementById('reviews')?.scrollIntoView({ behavior: 'smooth' })}>
+                    {t('avaliacoes_nav')}
+                  </button>
+                </li>
+                <li>
+                  <button type="button" className="footer-nav-link" onClick={() => document.getElementById('location')?.scrollIntoView({ behavior: 'smooth' })}>
+                    {t('localizacao_nav')}
+                  </button>
+                </li>
                 <li>
                   <button
                     type="button"
-                    className="whatsapp-link"
-                    style={{ color: 'inherit', textDecoration: 'none', background: 'none', border: 'none', padding: 0 }}
-                    data-lang-key="reservas_nav"
+                    className="footer-nav-link"
                     onClick={openBooking}
                   >
-                    Reservas
+                    {t('reservas_nav')}
                   </button>
                 </li>
               </ul>
             </div>
             <div className="footer-col reveal">
-              <h4 data-lang-key="contato">Contato</h4>
+              <h4>{t('contato')}</h4>
               <ul>
                 <li>
                   <a
@@ -1204,25 +1436,16 @@ export default function HomeScreen() {
                     WhatsApp
                   </a>
                 </li>
-                <li>{address}</li>
-                <li data-lang-key="brasilia_footer">Brasília, DF — Brasil</li>
-                <li data-lang-key="check_in">Check-in: flexível</li>
-                <li data-lang-key="politica">Política de cancelamento</li>
-                <li data-lang-key="privacidade">Privacidade</li>
               </ul>
             </div>
           </div>
           <div className="footer-bottom">
             <div className="footer-copy">
-              © 2025 VMS Flat — <span data-lang-key="todos_direitos">Todos os direitos reservados</span>
+              © 2025 VMS Flat — <span>{t('todos_direitos')}</span>
             </div>
             <div className="footer-links">
-              <a href="#" data-lang-key="termos">
-                Termos
-              </a>
-              <a href="#" data-lang-key="privacidade_footer">
-                Privacidade
-              </a>
+              <a href="#">{t('termos')}</a>
+              <a href="#">{t('privacidade_footer')}</a>
               <a
                 href={`https://maps.google.com/?q=${encodeURIComponent(address)}`}
                 target="_blank"
@@ -1239,7 +1462,7 @@ export default function HomeScreen() {
       <div id="float-cta">
         <button type="button" className="float-btn btn-salmon-shimmer whatsapp-link" onClick={openBooking}>
           <span className="float-icon">💬</span>
-          <span data-lang-key="reserve_agora_float">Reserve Agora</span>
+          <span>{t('reserve_agora_float')}</span>
         </button>
       </div>
 
@@ -1364,11 +1587,11 @@ export default function HomeScreen() {
                   <div className="summary">
                     <div className="summary-row">
                       <span className="summary-k">Check-in</span>
-                      <span className="summary-v">{checkIn}</span>
+                      <span className="summary-v">{formatDate(checkIn)}</span>
                     </div>
                     <div className="summary-row">
                       <span className="summary-k">Check-out</span>
-                      <span className="summary-v">{checkOut}</span>
+                      <span className="summary-v">{formatDate(checkOut)}</span>
                     </div>
                     <div className="summary-row">
                       <span className="summary-k">Hóspedes</span>
