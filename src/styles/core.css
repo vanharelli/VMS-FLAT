@@ -516,6 +516,17 @@ body::after {
   transition: transform .8s ease;
   filter: brightness(.88) saturate(.95);
 }
+.gc-watermark {
+  position: absolute;
+  bottom: 12px; right: 12px;
+  width: 52px; height: auto;
+  opacity: 0.18;
+  pointer-events: none;
+  filter: brightness(10) saturate(0);
+  z-index: 2;
+  transition: opacity .4s;
+}
+.gallery-card:hover .gc-watermark { opacity: 0.08; }
 .gcard-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(180deg, transparent 50%, rgba(42,30,18,.80) 100%);

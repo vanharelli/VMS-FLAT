@@ -1113,6 +1113,7 @@ export default function HomeScreen() {
                     onClick={() => openLightbox(src, `Foto ${label}`)}
                   >
                     <img className="gc-img" src={src} alt={`Foto ${label}`} loading="lazy" decoding="async" />
+                    <img className="gc-watermark" src="/logo2.webp" alt="" aria-hidden="true" />
                     <div className="gcard-overlay">
                       <span className="gc-label">{`VMS Flat · ${label}`}</span>
                     </div>
