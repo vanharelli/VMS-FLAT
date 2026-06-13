@@ -10,7 +10,7 @@ const translations = {
     hero_sub: 'Flat privativo na Asa Sul — reserve direto e economize até 20%',
     verificar_disponibilidade: 'Ver Disponibilidade',
     conhecer_flat: 'Conhecer o Flat',
-    scroll: 'Scroll',
+    scroll: 'Deslizar',
     galeria_label: 'O Espaço',
     galeria_title: 'Um flat pensado<br/><em>para quem exige</em> mais',
     galeria_desc:
@@ -88,7 +88,7 @@ const translations = {
     hero_sub: 'Private flat in Asa Sul — book direct and save up to 20%',
     verificar_disponibilidade: 'Check Availability',
     conhecer_flat: 'Explore the Flat',
-    scroll: 'Scroll',
+    scroll: 'Scroll down',
     galeria_label: 'The Space',
     galeria_title: 'A flat designed<br/><em>for those who</em> expect more',
     galeria_desc:
@@ -166,7 +166,7 @@ const translations = {
     hero_sub: 'Flat privado en Asa Sul — reserva directo y ahorra hasta 20%',
     verificar_disponibilidade: 'Ver Disponibilidad',
     conhecer_flat: 'Conocer el Flat',
-    scroll: 'Scroll',
+    scroll: 'Deslizar',
     galeria_label: 'El Espacio',
     galeria_title: 'Un flat pensado<br/><em>para quienes exigen</em> más',
     galeria_desc:
@@ -1100,9 +1100,16 @@ export default function HomeScreen() {
             </a>
           </div>
         </div>
-        <div className="hero-scroll-hint">
-          <div className="scroll-line" />
+        <div className="hero-scroll-hint" role="presentation" aria-hidden="true">
           <span className="scroll-text">{t('scroll')}</span>
+          <div className="scroll-chevrons">
+            <svg className="scroll-chev scroll-chev-1" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polyline points="2,2 12,10 22,2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <svg className="scroll-chev scroll-chev-2" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polyline points="2,2 12,10 22,2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
         </div>
       </section>
 
