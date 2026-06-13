@@ -51,6 +51,7 @@ const translations = {
     reviews_title: 'O que dizem<br/>nossos <em>hóspedes</em>',
     location_label: 'Localização',
     location_title: 'No coração<br/><em>de Brasília</em>',
+    location_desc: 'Asa Sul, a 10 minutos do Parque da Cidade e 25 minutos do Aeroporto — tudo que você precisa, ao alcance.',
     endereco: 'Endereço',
     dist_park: '~7 km · ~10 min',
     dist_airport: '~16 km · ~25 min',
@@ -128,6 +129,7 @@ const translations = {
     reviews_title: 'What our<br/><em>guests</em> say',
     location_label: 'Location',
     location_title: 'In the heart<br/><em>of Brasília</em>',
+    location_desc: 'Asa Sul — 10 min from Parque da Cidade, 25 min from the airport. Everything within reach.',
     endereco: 'Address',
     dist_park: '~7 km · ~10 min',
     dist_airport: '~16 km · ~25 min',
@@ -205,6 +207,7 @@ const translations = {
     reviews_title: 'Lo que dicen<br/>nuestros <em>huéspedes</em>',
     location_label: 'Ubicación',
     location_title: 'En el corazón<br/><em>de Brasília</em>',
+    location_desc: 'Asa Sul — a 10 min del Parque da Cidade y 25 min del aeropuerto. Todo al alcance.',
     endereco: 'Dirección',
     dist_park: '~7 km · ~10 min',
     dist_airport: '~16 km · ~25 min',
@@ -1373,6 +1376,7 @@ export default function HomeScreen() {
           <div className="reveal">
             <p className="section-label">{t('location_label')}</p>
             <h2 className="section-title" dangerouslySetInnerHTML={{ __html: t('location_title') }} />
+            <p className="section-desc">{t('location_desc')}</p>
           </div>
           <div className="location-grid">
             <div className="location-info reveal-left">

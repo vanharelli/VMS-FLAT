@@ -283,11 +283,17 @@ body::after {
 .hero-stars {
   display: flex; align-items: center; justify-content: center;
   gap: 10px; margin-top: 28px;
+  opacity: 0;
 }
 .hero-star {
   width: 22px; height: 22px;
   filter: drop-shadow(0 0 5px rgba(201,168,76,.75)) drop-shadow(0 0 12px rgba(240,200,80,.35));
+  transform-origin: center;
   animation: starPulse 2.8s ease-in-out infinite alternate;
+  animation-play-state: paused;
+}
+.hero-stars.active .hero-star {
+  animation-play-state: running;
 }
 @keyframes starPulse {
   from { filter: drop-shadow(0 0 4px rgba(201,168,76,.6)) drop-shadow(0 0 10px rgba(240,200,80,.25)); transform: scale(1); }
@@ -401,6 +407,14 @@ body::after {
   color: var(--text);
 }
 .section-title em { font-style: italic; color: var(--gold-light); }
+
+.section-desc {
+  margin-top: 16px;
+  font-size: clamp(.95rem, 1.6vw, 1.05rem);
+  color: var(--text-sub);
+  line-height: 1.65;
+  max-width: 480px;
+}
 
 .gold-divider {
   width: 64px; height: 1px;
