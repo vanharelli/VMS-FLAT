@@ -628,7 +628,8 @@ export default function HomeScreen() {
       .add('.hero-eyebrow', { opacity: [0, 1], translateY: [28, 0], duration: 900 }, 300)
       .add('.hero-logo',    { opacity: [0, 1], translateY: [28, 0], scale: [0.94, 1], duration: 1000 }, 600)
       .add('.hero-sub',     { opacity: [0, 1], translateY: [20, 0], duration: 800 }, 900)
-      .add('.hero-cta-wrap',{ opacity: [0, 1], translateY: [16, 0], duration: 700 }, 1100)
+      .add('.hero-stars',     { opacity: [0, 1], scale: [0.7, 1], duration: 700 }, 950)
+      .add('.hero-cta-wrap',  { opacity: [0, 1], translateY: [16, 0], duration: 700 }, 1100)
       .add('.hero-scroll-hint', { opacity: [0, 1], translateY: [12, 0], duration: 600 }, 1300)
 
     let mx = 0
@@ -1044,6 +1045,32 @@ export default function HomeScreen() {
               loading="eager"
               decoding="async"
             />
+          </div>
+          <div className="hero-stars" aria-label="5 estrelas">
+            {[0,1,2,3,4].map(i => (
+              <svg key={i} className="hero-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style={{ animationDelay: `${i * 0.12}s` }}>
+                <defs>
+                  <linearGradient id={`sg${i}`} x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%"   stopColor="#f5e6a3" />
+                    <stop offset="35%"  stopColor="#c9a84c" />
+                    <stop offset="65%"  stopColor="#f0d080" />
+                    <stop offset="100%" stopColor="#8a6820" />
+                  </linearGradient>
+                  <filter id={`sf${i}`}>
+                    <feGaussianBlur in="SourceAlpha" stdDeviation="0.6" result="blur" />
+                    <feOffset dx="0.4" dy="0.8" result="shadow" />
+                    <feComposite in="SourceGraphic" in2="shadow" operator="over" />
+                  </filter>
+                </defs>
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                  fill={`url(#sg${i})`}
+                  filter={`url(#sf${i})`}
+                  stroke="rgba(200,160,40,0.3)"
+                  strokeWidth="0.3"
+                />
+              </svg>
+            ))}
           </div>
           <p className="hero-sub">{t('hero_sub')}</p>
           <div className="hero-cta-wrap">

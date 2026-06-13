@@ -280,11 +280,24 @@ body::after {
   filter: brightness(0) invert(1) drop-shadow(0 0 40px rgba(201,168,76,.3));
 }
 
+.hero-stars {
+  display: flex; align-items: center; justify-content: center;
+  gap: 10px; margin-top: 28px;
+}
+.hero-star {
+  width: 22px; height: 22px;
+  filter: drop-shadow(0 0 5px rgba(201,168,76,.75)) drop-shadow(0 0 12px rgba(240,200,80,.35));
+  animation: starPulse 2.8s ease-in-out infinite alternate;
+}
+@keyframes starPulse {
+  from { filter: drop-shadow(0 0 4px rgba(201,168,76,.6)) drop-shadow(0 0 10px rgba(240,200,80,.25)); transform: scale(1); }
+  to   { filter: drop-shadow(0 0 8px rgba(201,168,76,.95)) drop-shadow(0 0 18px rgba(240,200,80,.55)); transform: scale(1.08); }
+}
 .hero-sub {
   font-size: .68rem; font-weight: 600;
   letter-spacing: .32em; text-transform: uppercase;
   color: rgba(237, 230, 213, .65);
-  margin-top: 32px;
+  margin-top: 20px;
   opacity: 0; animation: fadeUp .9s .9s forwards;
 }
 
