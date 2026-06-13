@@ -7,7 +7,7 @@ const translations = {
   pt: {
     reservar: 'Reservar',
     hero_eyebrow: '<strong class="hero-place-strong">Summer Park · SGAS 910 Sul · Brasília, DF</strong>',
-    hero_sub: 'Flat privativo na Asa Sul — reserve direto, sem taxas de plataforma',
+    hero_sub: 'Flat privativo na Asa Sul — reserve direto e economize até 20%',
     verificar_disponibilidade: 'Ver Disponibilidade',
     conhecer_flat: 'Conhecer o Flat',
     scroll: 'Scroll',
@@ -16,7 +16,7 @@ const translations = {
     galeria_desc:
       'Apartamento de 1 quarto no Summer Park, Asa Sul — cama queen, cozinha completa, ar-condicionado em todos os ambientes e condomínio fechado com portaria 24h. A 7 km do Parque da Cidade e 16 km do Aeroporto Internacional.',
     reserva_direta_label: 'Reserva Direta',
-    desconto_headline: 'Sem taxas de plataforma.<br>Reserve aqui e <strong>pague o preço real</strong>',
+    desconto_headline: 'Reserve direto e garanta<br><strong>até 20% de desconto</strong>',
     reservar_agora: 'Reservar Agora',
     comodidades_label: 'Comodidades',
     comodidades_title: 'O que você encontra<br/><em>quando chegar</em>',
@@ -43,7 +43,7 @@ const translations = {
     superhost: 'Superhost',
     host_role: 'Anfitriã · Brasília, Brasil',
     host_bio:
-      'Marina é anfitriã verificada no Summer Park há mais de 3 anos, com avaliação 5.0 em todas as estadias. Responde em menos de 1 hora, garante check-in sem burocracia e entrega o flat sempre impecável — sem surpresas, sem taxas ocultas.',
+      'Marina é anfitriã verificada no Summer Park há mais de 3 anos, com avaliação 5.0 em todas as estadias. Responde em menos de 1 hora, garante check-in sem burocracia e entrega o flat sempre impecável — sem surpresas, com até 20% de desconto na reserva direta.',
     avaliacao: 'Avaliação',
     resposta: 'Profissional',
     resposta_rapida: '+3 anos hospedando',
@@ -62,7 +62,7 @@ const translations = {
     brasilia_df: 'Brasília, DF',
     ver_mapa: 'Ver no Mapa ↗',
     footer_desc:
-      'SGAS 910 Sul, Bloco H — Summer Park, Asa Sul, Brasília. Reserve direto, pague menos que no Airbnb e tenha atendimento direto com a anfitriã.',
+      'SGAS 910 Sul, Bloco H — Summer Park, Asa Sul, Brasília. Reserve direto, economize até 20% e tenha atendimento direto com a anfitriã.',
     superhost_footer: '★ Superhost — Avaliação 5.0',
     navegacao: 'Navegação',
     o_flat: 'O Flat',
@@ -84,7 +84,7 @@ const translations = {
   en: {
     reservar: 'Book Now',
     hero_eyebrow: '<strong class="hero-place-strong">Summer Park · SGAS 910 Sul · Brasília, DF</strong>',
-    hero_sub: 'Private flat in Asa Sul — book direct, no platform fees',
+    hero_sub: 'Private flat in Asa Sul — book direct and save up to 20%',
     verificar_disponibilidade: 'Check Availability',
     conhecer_flat: 'Explore the Flat',
     scroll: 'Scroll',
@@ -93,7 +93,7 @@ const translations = {
     galeria_desc:
       '1-bedroom apartment at Summer Park, Asa Sul — queen bed, full kitchen, AC in every room and 24h gated building. 7 km from Parque da Cidade and 16 km from Brasília International Airport.',
     reserva_direta_label: 'Direct Booking',
-    desconto_headline: 'No platform fees.<br>Book here and <strong>pay the real price</strong>',
+    desconto_headline: 'Book direct and lock in<br><strong>up to 20% off</strong>',
     reservar_agora: 'Book Now',
     comodidades_label: 'Amenities',
     comodidades_title: 'What you\'ll find<br/><em>when you arrive</em>',
@@ -139,7 +139,7 @@ const translations = {
     brasilia_df: 'Brasília, DF',
     ver_mapa: 'View on Map ↗',
     footer_desc:
-      'SGAS 910 Sul, Bloco H — Summer Park, Asa Sul, Brasília. Book direct, pay less than on Airbnb, and deal straight with your host.',
+      'SGAS 910 Sul, Bloco H — Summer Park, Asa Sul, Brasília. Book direct, save up to 20%, and deal straight with your host.',
     superhost_footer: '★ Superhost — 5.0 Rating',
     navegacao: 'Navigation',
     o_flat: 'The Flat',
@@ -161,7 +161,7 @@ const translations = {
   es: {
     reservar: 'Reservar',
     hero_eyebrow: '<strong class="hero-place-strong">Summer Park · SGAS 910 Sul · Brasília, DF</strong>',
-    hero_sub: 'Flat privado en Asa Sul — reserva directo, sin tarifas de plataforma',
+    hero_sub: 'Flat privado en Asa Sul — reserva directo y ahorra hasta 20%',
     verificar_disponibilidade: 'Ver Disponibilidad',
     conhecer_flat: 'Conocer el Flat',
     scroll: 'Scroll',
@@ -170,7 +170,7 @@ const translations = {
     galeria_desc:
       'Apartamento de 1 dormitorio en Summer Park, Asa Sul — cama queen, cocina completa, aire acondicionado en todos los ambientes y edificio cerrado con portería 24h. A 7 km del Parque da Cidade y 16 km del aeropuerto.',
     reserva_direta_label: 'Reserva Directa',
-    desconto_headline: 'Sin tarifas de plataforma.<br>Reserva aquí y <strong>paga el precio real</strong>',
+    desconto_headline: 'Reserva directo y consigue<br><strong>hasta 20% de descuento</strong>',
     reservar_agora: 'Reservar Ahora',
     comodidades_label: 'Comodidades',
     comodidades_title: 'Lo que encontrarás<br/><em>cuando llegues</em>',
@@ -216,7 +216,7 @@ const translations = {
     brasilia_df: 'Brasília, DF',
     ver_mapa: 'Ver en el Mapa ↗',
     footer_desc:
-      'SGAS 910 Sul, Bloco H — Summer Park, Asa Sul, Brasília. Reserva directo, paga menos que en Airbnb y trata directamente con la anfitriona.',
+      'SGAS 910 Sul, Bloco H — Summer Park, Asa Sul, Brasília. Reserva directo, ahorra hasta 20% y trata directamente con la anfitriona.',
     superhost_footer: '★ Superanfitriona — Calificación 5.0',
     navegacao: 'Navegación',
     o_flat: 'El Flat',
