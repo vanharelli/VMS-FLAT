@@ -92,7 +92,7 @@ body::after {
 #progress-line {
   position: fixed;
   top: 0; left: 0;
-  height: 1px;
+  height: 3px;
   background: linear-gradient(to right, var(--gold-dark), var(--salmon), var(--gold), var(--gold-light));
   z-index: 10000;
   width: 0%;
