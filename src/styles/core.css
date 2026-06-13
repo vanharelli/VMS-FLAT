@@ -139,14 +139,16 @@ body::after {
   z-index: 1000;
   display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
   padding: 20px 56px;
-  background: transparent;
-  transition: background .5s, padding .4s, border-color .5s;
-  border-bottom: 1px solid transparent;
+  background: rgba(10, 6, 2, 0.28);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background .5s, padding .4s, border-color .5s, backdrop-filter .5s;
 }
 #lang-bar.scrolled {
-  background: rgba(250, 247, 242, 0.95);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(250, 247, 242, 0.75);
+  backdrop-filter: blur(24px) saturate(1.8);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
   border-bottom-color: var(--border);
   padding: 14px 56px;
 }
@@ -168,7 +170,7 @@ body::after {
 
 .lang-btn {
   background: none; border: 1px solid transparent;
-  color: var(--text-muted);
+  color: rgba(255,255,255,0.75);
   font-family: "Montserrat", sans-serif;
   font-size: .52rem; letter-spacing: .12em;
   text-transform: uppercase; cursor: none;
@@ -178,23 +180,39 @@ body::after {
 }
 .lang-btn img { flex-shrink: 0; box-shadow: 0 1px 4px rgba(0,0,0,.15); width: 16px; height: 11px; }
 .lang-btn.active {
-  color: var(--gold);
-  border-color: var(--border);
-  background: rgba(184,145,42,.07);
+  color: var(--gold-light);
+  border-color: rgba(201,168,76,.35);
+  background: rgba(184,145,42,.12);
 }
-.lang-btn:hover { color: var(--gold); }
-.lang-sep { color: var(--text-sub); opacity: .4; font-size: .55rem; }
+.lang-btn:hover { color: var(--gold-light); }
+.lang-sep { color: rgba(255,255,255,0.3); font-size: .55rem; }
+
+/* Header text adapts when scrolled (light bg) */
+#lang-bar.scrolled .lang-btn { color: var(--text-muted); }
+#lang-bar.scrolled .lang-btn.active { color: var(--gold); border-color: var(--border); background: rgba(184,145,42,.07); }
+#lang-bar.scrolled .lang-btn:hover { color: var(--gold); }
+#lang-bar.scrolled .lang-sep { color: var(--text-sub); opacity: .4; }
 
 .nav-reserve-btn {
-  border: 1px solid var(--border);
-  color: var(--gold);
-  background: rgba(201, 168, 76, 0.06);
+  border: 1px solid rgba(201,168,76,.5);
+  color: var(--gold-light);
+  background: rgba(201, 168, 76, 0.12);
   font-family: "Montserrat", sans-serif;
   font-size: .6rem; letter-spacing: .24em;
   text-transform: uppercase; padding: 11px 28px;
   cursor: none; transition: all .35s; border-radius: 2px;
 }
 .nav-reserve-btn:hover {
+  background: var(--gold);
+  color: var(--bg);
+  border-color: var(--gold);
+}
+#lang-bar.scrolled .nav-reserve-btn {
+  border-color: var(--border);
+  color: var(--gold);
+  background: rgba(201,168,76,.06);
+}
+#lang-bar.scrolled .nav-reserve-btn:hover {
   background: var(--gold);
   color: var(--bg);
 }
@@ -438,6 +456,17 @@ body::after {
 .btn-ghost:hover {
   border-color: var(--gold);
   color: var(--gold);
+}
+/* Ghost button on dark backgrounds (hero) */
+#hero .btn-ghost {
+  border-color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.90);
+  background: rgba(255, 255, 255, 0.07);
+}
+#hero .btn-ghost:hover {
+  border-color: var(--gold-light);
+  color: var(--gold-light);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .btn-salmon-shimmer {
