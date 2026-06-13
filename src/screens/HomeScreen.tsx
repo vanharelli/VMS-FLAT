@@ -257,6 +257,7 @@ export default function HomeScreen() {
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [lightboxSrc, setLightboxSrc] = useState('')
   const [lightboxAlt, setLightboxAlt] = useState('')
+  const [lightboxIndex, setLightboxIndex] = useState(0)
   const [bookingStep, setBookingStep] = useState<0 | 1 | 2 | 3>(0)
   const [checkIn, setCheckIn] = useState('')
   const [checkOut, setCheckOut] = useState('')
@@ -417,9 +418,10 @@ export default function HomeScreen() {
     setBookingOpen(false)
   }
 
-  const openLightbox = (src: string, alt: string) => {
+  const openLightbox = (src: string, alt: string, index: number) => {
     setLightboxSrc(src)
     setLightboxAlt(alt)
+    setLightboxIndex(index)
     setLightboxOpen(true)
   }
 
@@ -427,6 +429,15 @@ export default function HomeScreen() {
     setLightboxOpen(false)
     setLightboxSrc('')
     setLightboxAlt('')
+    setLightboxIndex(0)
+  }
+
+  const lightboxNav = (dir: 1 | -1) => {
+    if (galleryImages.length === 0) return
+    const next = (lightboxIndex + dir + galleryImages.length) % galleryImages.length
+    setLightboxIndex(next)
+    setLightboxSrc(galleryImages[next])
+    setLightboxAlt(`Foto ${String(next + 1).padStart(2, '0')}`)
   }
 
   const goNext = () => {
@@ -596,11 +607,9 @@ export default function HomeScreen() {
     document.body.style.overflow = 'hidden'
 
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key !== 'Escape') return
-      e.preventDefault()
-      e.stopPropagation()
-      if ('stopImmediatePropagation' in e) e.stopImmediatePropagation()
-      closeLightbox()
+      if (e.key === 'Escape') { e.preventDefault(); e.stopPropagation(); closeLightbox() }
+      else if (e.key === 'ArrowRight') lightboxNav(1)
+      else if (e.key === 'ArrowLeft') lightboxNav(-1)
     }
 
     document.addEventListener('keydown', onKeyDown, { capture: true })
@@ -608,7 +617,7 @@ export default function HomeScreen() {
       document.body.style.overflow = prevOverflow
       document.removeEventListener('keydown', onKeyDown, { capture: true })
     }
-  }, [lightboxOpen])
+  }, [lightboxOpen, lightboxIndex])
 
   useEffect(() => {
     const cursor = document.getElementById('cursor')
@@ -1162,7 +1171,7 @@ export default function HomeScreen() {
                     className="gallery-card"
                     key={`${src}-${idx}`}
                     data-zoomable="true"
-                    onClick={() => openLightbox(src, `Foto ${label}`)}
+                    onClick={() => openLightbox(src, `Foto ${label}`, idx % galleryImages.length)}
                   >
                     <img className="gc-img" src={src} alt={`Foto ${label}`} loading="lazy" decoding="async" />
                     <img className="gc-watermark" src="/logo2.webp" alt="" aria-hidden="true" />
@@ -1725,10 +1734,15 @@ export default function HomeScreen() {
           }}
         >
           <div className="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
-            <button type="button" className="lightbox-close" aria-label="Fechar" onClick={closeLightbox}>
-              ×
+            <button type="button" className="lightbox-close" aria-label="Fechar" onClick={closeLightbox}>×</button>
+            <button type="button" className="lightbox-nav lightbox-prev" aria-label="Anterior" onClick={(e) => { e.stopPropagation(); lightboxNav(-1) }}>
+              <svg viewBox="0 0 24 24" fill="none"><polyline points="15,6 9,12 15,18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
             <img className="lightbox-img" src={lightboxSrc} alt={lightboxAlt || 'Imagem ampliada'} />
+            <button type="button" className="lightbox-nav lightbox-next" aria-label="Próxima" onClick={(e) => { e.stopPropagation(); lightboxNav(1) }}>
+              <svg viewBox="0 0 24 24" fill="none"><polyline points="9,6 15,12 9,18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </button>
+            <div className="lightbox-counter">{lightboxIndex + 1} / {galleryImages.length}</div>
           </div>
         </div>
       )}
