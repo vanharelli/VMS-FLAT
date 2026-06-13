@@ -518,15 +518,15 @@ body::after {
 }
 .gc-watermark {
   position: absolute;
-  bottom: 12px; right: 12px;
-  width: 52px; height: auto;
-  opacity: 0.18;
+  bottom: 14px; right: 14px;
+  width: 72px; height: auto;
+  opacity: 0.45;
   pointer-events: none;
-  filter: brightness(10) saturate(0);
+  filter: brightness(0) invert(1);
   z-index: 2;
   transition: opacity .4s;
 }
-.gallery-card:hover .gc-watermark { opacity: 0.08; }
+.gallery-card:hover .gc-watermark { opacity: 0.30; }
 .gcard-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(180deg, transparent 50%, rgba(42,30,18,.80) 100%);
