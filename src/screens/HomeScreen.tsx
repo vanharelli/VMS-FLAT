@@ -20,22 +20,26 @@ const translations = {
     reservar_agora: 'Reservar Agora',
     comodidades_label: 'Comodidades',
     comodidades_title: 'Tudo o que você<br/><em>precisa e merece</em>',
-    wifi: 'Wi‑Fi Ultra Rápido',
-    wifi_desc: 'Fibra 500 Mbps',
+    wifi: 'Wi‑Fi 5G',
+    wifi_desc: 'Internet ultra-rápida e espaço de trabalho exclusivo',
     parking: 'Estacionamento',
-    parking_desc: 'Garagem coberta privativa (rotativo, por conta do hóspede)',
+    parking_desc: 'Vaga coberta gratuita no local (rotativa)',
     ac: 'Climatização',
-    ac_desc: 'Ar-condicionado split',
-    kitchen: 'Cozinha Equipada',
-    kitchen_desc: 'Completa e moderna',
+    ac_desc: 'Ar-condicionado split silencioso',
+    kitchen: 'Cozinha',
+    kitchen_desc: 'Equipada com refrigerador, panelas, pratos e talheres',
+    bathroom: 'Banheiro',
+    bathroom_desc: 'Banheira, água quente e sabonete para o corpo',
+    tv: 'Entretenimento',
+    tv_desc: 'Smart TV de alta definição para streaming',
+    bed: 'Itens Básicos',
+    bed_desc: 'Toalhas, lençóis, sabonete e papel higiênico',
     laundry: 'Lavanderia',
-    laundry_desc: 'Máquina de lavar e secar (verificar informação e valor com a anfitriã)',
+    laundry_desc: 'Máquina de lavar e secar no condomínio',
+    bedroom: 'Quarto',
+    bedroom_desc: 'Closet espaçoso para organizar suas roupas',
     security: 'Segurança 24h',
-    security_desc: 'Portaria e câmeras',
-    tv: 'Smart TV',
-    tv_desc: 'Netflix e streamings',
-    bed: 'Roupa de Cama',
-    bed_desc: 'Enxoval premium incluso',
+    security_desc: 'Portaria e monitoramento por câmeras',
     superhost: 'Superhost',
     host_role: 'Anfitriã · Brasília, Brasil',
     host_bio:
@@ -93,22 +97,26 @@ const translations = {
     reservar_agora: 'Book Now',
     comodidades_label: 'Amenities',
     comodidades_title: 'Everything you need<br/><em>and deserve</em>',
-    wifi: 'Ultra-Fast Wi‑Fi',
-    wifi_desc: '500 Mbps fiber',
+    wifi: 'Wi‑Fi 5G',
+    wifi_desc: 'Ultra-fast internet and dedicated workspace',
     parking: 'Parking',
-    parking_desc: 'Covered garage (rotating, guest-paid)',
+    parking_desc: 'Free covered spot on site (rotating)',
     ac: 'Air Conditioning',
-    ac_desc: 'Split AC units',
-    kitchen: 'Full Kitchen',
-    kitchen_desc: 'Fully equipped & modern',
+    ac_desc: 'Silent split AC unit',
+    kitchen: 'Kitchen',
+    kitchen_desc: 'Equipped with fridge, pots, plates and cutlery',
+    bathroom: 'Bathroom',
+    bathroom_desc: 'Bathtub, hot water and body soap',
+    tv: 'Entertainment',
+    tv_desc: 'High-definition Smart TV for streaming',
+    bed: 'Basic Supplies',
+    bed_desc: 'Towels, bed linen, soap and toilet paper',
     laundry: 'Laundry',
-    laundry_desc: 'Washer and dryer (check details and fees with host)',
+    laundry_desc: 'Washer and dryer in the building',
+    bedroom: 'Bedroom',
+    bedroom_desc: 'Spacious closet to organize your clothes',
     security: '24h Security',
-    security_desc: 'Concierge & cameras',
-    tv: 'Smart TV',
-    tv_desc: 'Netflix & streaming',
-    bed: 'Bed Linen',
-    bed_desc: 'Premium linens included',
+    security_desc: 'Concierge and camera monitoring',
     superhost: 'Superhost',
     host_role: 'Host · Brasília, Brazil',
     host_bio:
@@ -166,22 +174,26 @@ const translations = {
     reservar_agora: 'Reservar Ahora',
     comodidades_label: 'Comodidades',
     comodidades_title: 'Todo lo que necesitas<br/><em>y mereces</em>',
-    wifi: 'Wi‑Fi Ultra Rápido',
-    wifi_desc: 'Fibra 500 Mbps',
+    wifi: 'Wi‑Fi 5G',
+    wifi_desc: 'Internet ultrarrápida y espacio de trabajo exclusivo',
     parking: 'Estacionamiento',
-    parking_desc: 'Garaje cubierto (rotativo, a cargo del huésped)',
+    parking_desc: 'Plaza cubierta gratuita en el lugar (rotativa)',
     ac: 'Climatización',
-    ac_desc: 'Aire acondicionado split',
-    kitchen: 'Cocina Equipada',
-    kitchen_desc: 'Completa y moderna',
+    ac_desc: 'Aire acondicionado split silencioso',
+    kitchen: 'Cocina',
+    kitchen_desc: 'Equipada con refrigerador, ollas, platos y cubiertos',
+    bathroom: 'Baño',
+    bathroom_desc: 'Bañera, agua caliente y jabón corporal',
+    tv: 'Entretenimiento',
+    tv_desc: 'Smart TV de alta definición para streaming',
+    bed: 'Artículos Básicos',
+    bed_desc: 'Toallas, ropa de cama, jabón y papel higiénico',
     laundry: 'Lavandería',
-    laundry_desc: 'Lavadora y secadora (verificar información y costo con la anfitriona)',
+    laundry_desc: 'Lavadora y secadora en el edificio',
+    bedroom: 'Habitación',
+    bedroom_desc: 'Amplio armario para organizar tu ropa',
     security: 'Seguridad 24h',
-    security_desc: 'Portería y cámaras',
-    tv: 'Smart TV',
-    tv_desc: 'Netflix y streaming',
-    bed: 'Ropa de Cama',
-    bed_desc: 'Ajuar premium incluido',
+    security_desc: 'Portería y monitoreo por cámaras',
     superhost: 'Superanfitriona',
     host_role: 'Anfitriona · Brasília, Brasil',
     host_bio:
@@ -1162,24 +1174,19 @@ export default function HomeScreen() {
               <div className="amenity-desc">{t('parking_desc')}</div>
             </div>
             <div className="amenity-item reveal">
-              <span className="amenity-icon">❄️</span>
+              <span className="amenity-icon">💨</span>
               <div className="amenity-name">{t('ac')}</div>
               <div className="amenity-desc">{t('ac_desc')}</div>
             </div>
             <div className="amenity-item reveal">
-              <span className="amenity-icon">🍳</span>
+              <span className="amenity-icon">🍴</span>
               <div className="amenity-name">{t('kitchen')}</div>
               <div className="amenity-desc">{t('kitchen_desc')}</div>
             </div>
             <div className="amenity-item reveal">
-              <span className="amenity-icon">🧺</span>
-              <div className="amenity-name">{t('laundry')}</div>
-              <div className="amenity-desc">{t('laundry_desc')}</div>
-            </div>
-            <div className="amenity-item reveal">
-              <span className="amenity-icon">🔒</span>
-              <div className="amenity-name">{t('security')}</div>
-              <div className="amenity-desc">{t('security_desc')}</div>
+              <span className="amenity-icon">🛁</span>
+              <div className="amenity-name">{t('bathroom')}</div>
+              <div className="amenity-desc">{t('bathroom_desc')}</div>
             </div>
             <div className="amenity-item reveal">
               <span className="amenity-icon">📺</span>
@@ -1187,34 +1194,24 @@ export default function HomeScreen() {
               <div className="amenity-desc">{t('tv_desc')}</div>
             </div>
             <div className="amenity-item reveal">
-              <span className="amenity-icon">🛏️</span>
+              <span className="amenity-icon">✅</span>
               <div className="amenity-name">{t('bed')}</div>
               <div className="amenity-desc">{t('bed_desc')}</div>
             </div>
             <div className="amenity-item reveal">
-              <span className="amenity-icon">🪟</span>
-              <div className="amenity-name">Varanda</div>
-              <div className="amenity-desc">Vista para área verde do condomínio</div>
+              <span className="amenity-icon">👕</span>
+              <div className="amenity-name">{t('laundry')}</div>
+              <div className="amenity-desc">{t('laundry_desc')}</div>
             </div>
             <div className="amenity-item reveal">
-              <span className="amenity-icon">🧴</span>
-              <div className="amenity-name">Produtos de Higiene</div>
-              <div className="amenity-desc">Shampoo, condicionador e sabonete inclusos</div>
+              <span className="amenity-icon">🗄️</span>
+              <div className="amenity-name">{t('bedroom')}</div>
+              <div className="amenity-desc">{t('bedroom_desc')}</div>
             </div>
             <div className="amenity-item reveal">
-              <span className="amenity-icon">☕</span>
-              <div className="amenity-name">Cafeteira</div>
-              <div className="amenity-desc">Nespresso disponível no flat</div>
-            </div>
-            <div className="amenity-item reveal">
-              <span className="amenity-icon">🏊</span>
-              <div className="amenity-name">Piscina</div>
-              <div className="amenity-desc">Área de lazer do condomínio Summer Park</div>
-            </div>
-            <div className="amenity-item reveal">
-              <span className="amenity-icon">🏋️</span>
-              <div className="amenity-name">Academia</div>
-              <div className="amenity-desc">Acesso à academia do condomínio</div>
+              <span className="amenity-icon">🛡️</span>
+              <div className="amenity-name">{t('security')}</div>
+              <div className="amenity-desc">{t('security_desc')}</div>
             </div>
           </div>
         </div>
