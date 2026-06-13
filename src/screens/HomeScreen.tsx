@@ -637,13 +637,15 @@ export default function HomeScreen() {
     const starsTimer = setTimeout(() => {
       const starsEl = document.querySelector<HTMLElement>('.hero-stars')
       if (!starsEl) return
+      starsEl.style.opacity = '1'
       starsEl.classList.add('active')
-      animate('.hero-star', {
-        opacity: [0, 1],
-        scale: [0.4, 1.15, 1],
-        duration: 600,
-        delay: (_el: Element, i: number) => i * 80,
-        ease: 'outBack',
+      const starEls = Array.from(document.querySelectorAll<HTMLElement>('.hero-star'))
+      starEls.forEach((el, i) => {
+        el.style.opacity = '0'
+        el.style.transform = 'scale(0.3)'
+        setTimeout(() => {
+          animate(el, { opacity: [0, 1], scale: [0.3, 1.2, 1], duration: 550, ease: 'outBack' })
+        }, i * 80)
       })
     }, 2000)
 
