@@ -628,9 +628,21 @@ export default function HomeScreen() {
       .add('.hero-eyebrow', { opacity: [0, 1], translateY: [28, 0], duration: 900 }, 300)
       .add('.hero-logo',    { opacity: [0, 1], translateY: [28, 0], scale: [0.94, 1], duration: 1000 }, 600)
       .add('.hero-sub',     { opacity: [0, 1], translateY: [20, 0], duration: 800 }, 900)
-      .add('.hero-stars',     { opacity: [0, 1], scale: [0.7, 1], duration: 700 }, 950)
       .add('.hero-cta-wrap',  { opacity: [0, 1], translateY: [16, 0], duration: 700 }, 1100)
       .add('.hero-scroll-hint', { opacity: [0, 1], translateY: [12, 0], duration: 600 }, 1300)
+
+    const starsTimer = setTimeout(() => {
+      const starsEl = document.querySelector<HTMLElement>('.hero-stars')
+      if (!starsEl) return
+      starsEl.classList.add('active')
+      animate('.hero-star', {
+        opacity: [0, 1],
+        scale: [0.4, 1.15, 1],
+        duration: 600,
+        delay: (_el: Element, i: number) => i * 80,
+        ease: 'outBack',
+      })
+    }, 5000)
 
     let mx = 0
     let my = 0
@@ -949,6 +961,7 @@ export default function HomeScreen() {
     statEls.forEach((el) => statObserver.observe(el))
 
     return () => {
+      clearTimeout(starsTimer)
       window.removeEventListener('scroll', onScroll)
       document.removeEventListener('mousemove', onMouseMove)
       window.cancelAnimationFrame(rafId)
