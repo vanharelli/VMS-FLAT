@@ -645,7 +645,7 @@ export default function HomeScreen() {
         delay: (_el: Element, i: number) => i * 80,
         ease: 'outBack',
       })
-    }, 5000)
+    }, 2000)
 
     let mx = 0
     let my = 0
@@ -1396,12 +1396,6 @@ export default function HomeScreen() {
                         alt={p.alt}
                         loading="lazy"
                         decoding="async"
-                        data-zoomable="true"
-                        onClick={(e) => {
-                          e.preventDefault()
-                          e.stopPropagation()
-                          openLightbox(p.imgSrc, p.alt)
-                        }}
                       />
                     </div>
                     <div className="nearby-content">
