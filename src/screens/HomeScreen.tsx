@@ -7,7 +7,7 @@ const translations = {
   pt: {
     reservar: 'Reservar',
     hero_eyebrow: '<strong class="hero-place-strong">Summer Park Brasília - DF</strong>',
-    hero_sub: 'Sofisticação & Conforto — Por Diária ou Temporada',
+    hero_sub: 'Sofisticação, Conforto e Ambiente Aconchegante',
     verificar_disponibilidade: 'Verificar Disponibilidade',
     conhecer_flat: 'Conhecer o Flat',
     scroll: 'Scroll',
@@ -80,7 +80,7 @@ const translations = {
   en: {
     reservar: 'Book Now',
     hero_eyebrow: '<strong class="hero-place-strong">Summer Park Brasília - DF</strong>',
-    hero_sub: 'Sophistication & Comfort — Daily or Extended Stays',
+    hero_sub: 'Sophistication, Comfort & a Welcoming Atmosphere',
     verificar_disponibilidade: 'Check Availability',
     conhecer_flat: 'Explore the Flat',
     scroll: 'Scroll',
@@ -153,7 +153,7 @@ const translations = {
   es: {
     reservar: 'Reservar',
     hero_eyebrow: '<strong class="hero-place-strong">Summer Park Brasília - DF</strong>',
-    hero_sub: 'Sofisticación & Confort — Por Noche o Temporada',
+    hero_sub: 'Sofisticación, Confort y Ambiente Acogedor',
     verificar_disponibilidade: 'Verificar Disponibilidad',
     conhecer_flat: 'Conocer el Flat',
     scroll: 'Scroll',
